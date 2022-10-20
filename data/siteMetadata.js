@@ -5,10 +5,10 @@ const siteMetadata = {
   description: "Hi 👋, I'm Chanwoong Jeong.",
   language: 'ko',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteUrl: 'https://google.com',
+  siteRepo: 'https://github.com/chanwoong1',
   siteLogo: '/static/images/logo.png',
-  image: '/static/images/avatar.png',
+  image: '/static/images/avatar.gif',
   socialBanner: '/static/images/twitter-card.png',
   email: 'jcw7468@naver.com',
   github: 'https://github.com/Chanwoong1',
