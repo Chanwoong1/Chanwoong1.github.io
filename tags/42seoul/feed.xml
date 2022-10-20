@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>WOONGTECH</title>
+      <link>https://google.com/blog</link>
+      <description>Hi 👋, I&#39;m Chanwoong Jeong.</description>
+      <language>ko</language>
+      <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
+      <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
+      <lastBuildDate>Thu, 14 Jul 2022 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://google.com/tags/42seoul/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://google.com/blog/[42seoul]libft</guid>
+    <title>[42seoul]libft</title>
+    <link>https://google.com/blog/[42seoul]libft</link>
+    <description>42서울의 첫 과제, 나만의 라이브러리 만들기</description>
+    <pubDate>Thu, 14 Jul 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>C</category><category>42seoul</category><category>Makefile</category>
+  </item>
+
+    </channel>
+  </rss>
