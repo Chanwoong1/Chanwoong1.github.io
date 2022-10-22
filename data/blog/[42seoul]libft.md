@@ -4,21 +4,21 @@ date: '2022-07-14'
 tags: ['C', '42seoul', 'Makefile']
 draft: false
 summary: 42서울의 첫 과제, 나만의 라이브러리 만들기
+layout: PostSimple
 ---
-
 # LIBFT
 
 ## Contents
 
 - [Libft](#libft)
-  - [Contents](#contents)
-  - [나만의 라이브러리 만들기](#나만의-라이브러리-만들기)
-  - [1. memory](#1.-memory)
-  - [2. bonus(linked list)](<#2.-bonus(linked-list)>)
-  - [try](<#try-(104점)>)
-  - [retry](<#retry-(105점)>)
-  - [2nd retry](<#2nd-retry-(125점)>)
-  - [느낀 점](#과제-수행-후-느낀-점)
+- [Contents](#contents)
+- [나만의 라이브러리 만들기](#나만의-라이브러리-만들기)
+- [try](<#try>)
+- [retry](<#retry>)
+- [2nd retry](<#2nd-retry>)
+- [느낀 점](#과제-수행-후-느낀-점)
+
+---
 
 ## 나만의 라이브러리 만들기
 
@@ -26,13 +26,24 @@ summary: 42서울의 첫 과제, 나만의 라이브러리 만들기
 
 모든것을 자기 손으로 직접 만들어보라는 42의 뜻이지 않을까 싶다.
 
----
-
 웬만한 것들은 라피신 기간동안 했던 것들이나, 조금씩 달라지거나 아예 처음 만들어야하는 함수들도 있었다.
 
 그것들 위주로 소개해보려 한다.
 
 ---
+### 0. Makefile
+[Makefile](https://www.gnu.org/software/make/manual/make.html)은 프로그램을 관리하는 프로그램이고 특정 프로그램의 일정 부분이 수정되어 다시 컴파일이 필요할 경우, 간편하게 해주는 프로그램이다.
+
+libft 과제의 경우, libft.a라는 정적 라이브러리를 만들 때 Makefile이 필요하다고 한다.
+
+라이브러리를 만들기 위해서는 목적파일들이 있어야하고, 이 목적 파일들을 하나로 묶어주는 작업이 필요하다. 우리는 이 목적파일도 Makefile을 이용해 간편하게 만들 수 있다.
+
+```bash
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+```
+
+위 명령어는 컴파일러를 통해 목적파일을 생성하는 명령어이다. -c는 complie을 뜻하고, -o는 output을 뜻한다. 즉, \$< 를 통해 컴파일 한 뒤, \$@인 결과를 만들겠다는 뜻이다. 이 표현들은 Makefile에서 제공하는 기본 룰로, 자동 변수라고 한다. 자동 변수를 쓰는 이유는, 많은 파일들을 하나의 명령어로 작동시킬 때, 각각의 파일 이름들이 다르기 때문에 명령어에 직접적인 파일 이름을 쓸 수 없기 때문이다. 자세한 내용은 [자동변수](https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html)참고.
 
 ### 1. memory
 
@@ -128,7 +139,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 ---
 
-## try (104점)
+## try
 
 테스트기를 충분히 활용하였고, 모든 함수에 문제가 없다고 판단하여 제출하였으나, strrchr부분에서 문제가 발생하였다. 어떤 부분이 틀렸는지 명확하게 나오지 않아서 혼란스러웠다.
 
@@ -156,7 +167,7 @@ char	*ft_strrchr(const char *s, int c)
 
 ---
 
-## retry (105점)
+## retry
 
 ```C
 char	*ft_strrchr(const char *s, int c)
@@ -184,7 +195,7 @@ char	*ft_strrchr(const char *s, int c)
 
 ---
 
-## 2nd retry (125점)
+## 2nd retry
 
 드디어 고친것이 맞았다. 그 동안 평가 하면서 어떤게 틀렸는지 함께 고민해주신 동료 카뎃분들께 감사...
 
@@ -193,3 +204,9 @@ char	*ft_strrchr(const char *s, int c)
 본과정 들어와서 첫 과제였는데, 생각보다 예외처리 사항이나, 만들어야하는 함수가 많아서 힘든 과제였던 것 같다. libft를 한번 만들어놓으면 향후 과제 수행에 계속 쓴다고 하니 잘 만들어 두어야 나중에 고생하지 않는다고 한다.
 
 코딩 실력이 좀 더 좋아지면 코드를 조금씩 다듬는 식으로 계속 업데이트를 해봐야겠다.
+
+## Reference
+
+[Makefile Manual](https://www.gnu.org/software/make/manual/make.html)
+
+[자동변수](https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html)
