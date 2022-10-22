@@ -114,7 +114,7 @@ MAC
 디스크 분할에서 수동(Manual 선택)
 
 그 후, 주 영역과 논리 영역으로 파티션 분할.
-![Alt text](/static/images/debian_setup0.png)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/devian_setup0.png?raw=true)
 논리 영역에서 부팅을 안하는 이유는 논리 영역으로 설정은 했지만 확장 영역에 속해야한다.
 
 확장 영역이란 주 영역에서 사용가능한 영역.
@@ -127,26 +127,26 @@ create 선택 후, sda5 선택.
 
 그 후 암호화 여러 설정 후, Configure the Logical Volume Manager 선택.
 
-![Alt text](/static/images/debian_setup1.png)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/devian_setup1.png?raw=true)
 
 - 마운트 과정 중 LVMGroup - LVhome 선택
-  ![Alt text](/static/images/debian_setup2.png)
+  ![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/devian_setup2.png?raw=true)
   Ext4 file system : Ext3 file system을 개선한 버전으로 대용량 파일 시스템을 지원함. Ext3과 호환 가능하므로, Ext4 사용 권장.
 
 마운트 위치도 변경 : 없음 -> /home
 
 - 각각의 그룹을 용도에 맞게 변경
   단, swap은 swap area 선택, var-log는 경로 직접 입력으로 /var/log 입력
-  ![Alt text](/static/images/debian_setup3.png)
+  ![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/devian_setup3.png?raw=true)
 
 - GRUB(Grand Unified Bootloader) 부트로더 설정 (YES -> /dev/sda 선택)
   부트로더 : 운영 체제가 실행되기 이전에 미리 실행되어 커널이 올바르게 실행될 수 있도록 사전작업을 수행하고, 최종적으로는 아무 이상 없이 운영체제를 실행시키기 위한 프로그램 (부팅의 전 과정을 진행하는 부팅 전문 프로그램을 의미)
 
 여기까지 수행하면 설치를 모두 마치게 된다.
-![Alt text](/static/images/debian_setup4.png)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/devian_setup4.png?raw=true)
 
 설치 후 접속하여 lsblk 명령어 입력했을 때
-![Alt text](/static/images/debian_setup5.png)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/devian_setup5.png?raw=true)
 
 ### sudo setup
 
