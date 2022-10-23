@@ -12,12 +12,12 @@
       
   <item>
     <guid>https://google.com/blog/[42seoul]libft</guid>
-    <title>[42seoul]libft</title>
+    <title>[42seoul] libft</title>
     <link>https://google.com/blog/[42seoul]libft</link>
     <description>42서울의 첫 과제, 나만의 라이브러리 만들기</description>
     <pubDate>Thu, 14 Jul 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
-    <category>C</category><category>42seoul</category><category>Makefile</category>
+    <category>0th_circle</category><category>C</category><category>42seoul</category><category>Makefile</category>
   </item>
 
     </channel>

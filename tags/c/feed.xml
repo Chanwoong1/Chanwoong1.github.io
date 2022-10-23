@@ -7,27 +7,37 @@
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
-      <lastBuildDate>Fri, 29 Jul 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Tue, 09 Aug 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://google.com/tags/c/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
+    <guid>https://google.com/blog/[42seoul]ft_printf</guid>
+    <title>[42seoul] ft_printf</title>
+    <link>https://google.com/blog/[42seoul]ft_printf</link>
+    <description>write만 쓰기엔 표현해야할 것이 많다.</description>
+    <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>1st_circle</category><category>C</category><category>42seoul</category><category>printf</category>
+  </item>
+
+  <item>
     <guid>https://google.com/blog/[42seoul]Get_Next_Line</guid>
-    <title>[42seoul]Get Next Line</title>
+    <title>[42seoul] Get Next Line</title>
     <link>https://google.com/blog/[42seoul]Get_Next_Line</link>
     <description>다음 줄 읽는건 그냥 개행문자만 찾으면 되는거 아닌가요??</description>
     <pubDate>Fri, 29 Jul 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
-    <category>C</category><category>open</category><category>read</category><category>memory leaks</category><category>42seoul</category>
+    <category>1st_circle</category><category>C</category><category>open</category><category>read</category><category>memory leaks</category><category>42seoul</category>
   </item>
 
   <item>
     <guid>https://google.com/blog/[42seoul]libft</guid>
-    <title>[42seoul]libft</title>
+    <title>[42seoul] libft</title>
     <link>https://google.com/blog/[42seoul]libft</link>
     <description>42서울의 첫 과제, 나만의 라이브러리 만들기</description>
     <pubDate>Thu, 14 Jul 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
-    <category>C</category><category>42seoul</category><category>Makefile</category>
+    <category>0th_circle</category><category>C</category><category>42seoul</category><category>Makefile</category>
   </item>
 
     </channel>
