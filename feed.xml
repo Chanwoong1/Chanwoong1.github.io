@@ -7,9 +7,19 @@
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
-      <lastBuildDate>Fri, 29 Jul 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Wed, 21 Sep 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://google.com/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://google.com/blog/blog_project</guid>
+    <title>Blog Project</title>
+    <link>https://google.com/blog/blog_project</link>
+    <description>How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.</description>
+    <pubDate>Wed, 21 Sep 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>next.js</category><category>blog</category>
+  </item>
+
   <item>
     <guid>https://google.com/blog/[42seoul]Get_Next_Line</guid>
     <title>[42seoul]Get Next Line</title>
@@ -45,7 +55,7 @@
     <title>데이터 분석을 통한 이용 고객 페르소나 정의</title>
     <link>https://google.com/blog/persona_project</link>
     <description>데이터를 통해 고객 페르소나를 정의하고, 활용하는 방안을 생각해보았습니다.</description>
-    <pubDate>Fri, 15 Oct 2021 00:00:00 GMT</pubDate>
+    <pubDate>Sun, 24 Oct 2021 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
     <category>python</category>
   </item>

@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>WOONGTECH</title>
+      <link>https://google.com/blog</link>
+      <description>Hi 👋, I&#39;m Chanwoong Jeong.</description>
+      <language>ko</language>
+      <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
+      <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
+      <lastBuildDate>Wed, 21 Sep 2022 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://google.com/tags/nextjs/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://google.com/blog/blog_project</guid>
+    <title>Blog Project</title>
+    <link>https://google.com/blog/blog_project</link>
+    <description>How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.</description>
+    <pubDate>Wed, 21 Sep 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>next.js</category><category>blog</category>
+  </item>
+
+    </channel>
+  </rss>
