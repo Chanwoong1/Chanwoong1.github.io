@@ -3,7 +3,7 @@ title: '[42seoul]Get Next Line'
 date: '2022-07-29'
 tags: ['C', 'open', 'read', 'memory leaks', '42seoul']
 draft: false
-summary: 다음 줄을 읽으려면 그냥 개행문자만 찾으면 되는거 아닌가요??
+summary: 다음 줄 읽는건 그냥 개행문자만 찾으면 되는거 아닌가요??
 layout: PostSimple
 ---
 
