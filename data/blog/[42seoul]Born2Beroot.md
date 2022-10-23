@@ -127,17 +127,17 @@ create 선택 후, sda5 선택.
 
 그 후 암호화 여러 설정 후, Configure the Logical Volume Manager 선택.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/devian_setup1.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/debian_setup1.png?raw=true)
 
 - 마운트 과정 중 LVMGroup - LVhome 선택
-  ![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/devian_setup2.png?raw=true)
+  ![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/debian_setup2.png?raw=true)
   Ext4 file system : Ext3 file system을 개선한 버전으로 대용량 파일 시스템을 지원함. Ext3과 호환 가능하므로, Ext4 사용 권장.
 
 마운트 위치도 변경 : 없음 -> /home
 
 - 각각의 그룹을 용도에 맞게 변경
   단, swap은 swap area 선택, var-log는 경로 직접 입력으로 /var/log 입력
-  ![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/devian_setup3.png?raw=true)
+  ![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/debian_setup3.png?raw=true)
 
 - GRUB(Grand Unified Bootloader) 부트로더 설정 (YES -> /dev/sda 선택)
   부트로더 : 운영 체제가 실행되기 이전에 미리 실행되어 커널이 올바르게 실행될 수 있도록 사전작업을 수행하고, 최종적으로는 아무 이상 없이 운영체제를 실행시키기 위한 프로그램 (부팅의 전 과정을 진행하는 부팅 전문 프로그램을 의미)
@@ -195,7 +195,7 @@ Defaults	passwd_tries=3
 
 로 수정한다.
 
-![sudo_setup1](/data/blog/blog_images/sudo_setup1.png)
+![sudo_setup1](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/sudo_setup1.png?raw=true)
 
 - authfail_message
 
@@ -374,7 +374,7 @@ sudo hostnamectl set-hostname [바꿀 호스트명]
 host ip에 vnetbox0의 주소 입력, guest ip에 가상머신의 주소 입력, 포트는 모두 4242 입력
 
 그 후, adapter2로 넘어가서
-![Alt text](/static/images/port_forwarding1.png)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/port_forwarding1.png?raw=true)
 과 같이 설정
 
 그 후 터미널에서
@@ -383,7 +383,7 @@ host ip에 vnetbox0의 주소 입력, guest ip에 가상머신의 주소 입력,
 ssh chanwjeo@***.***.***.*** -p 4242
 ```
 
-![Alt text](/static/images/port_forwarding1.png)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/port_forwarding2.png?raw=true)
 명령어 입력해주면 접속 가능
 
 root는 접속 불가로 설정
@@ -542,12 +542,12 @@ crontab -e
 
 ### Partitions
 
-![Alt text](/static/images/Bonus_part1.png)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/Bonus_part1.png?raw=true)
 정확히 용량까지 맞지는 않지만
-![Alt text](/static/images/Bonus_part2.png)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/Bonus_part2.png?raw=true)
 형태를 맞춰주었다.
 
-![Alt text](/static/images/Bonus_part3.png)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/Bonus_part3.png?raw=true)
 
 ### Setup Wordpress
 
@@ -597,7 +597,7 @@ vi /etc/lighttpd/lighttpd.conf
 ```
 
 들어가보면
-![Alt text](/static/images/Bonus_part3.png)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/Bonus_part4.png?raw=true)
 기본 설정이 80번 포트로 되어있어서 방화벽을 해제해주어야 한다.
 
 ```
@@ -684,7 +684,7 @@ http://localhost:8000/wordpress
 
 를 입력하면
 
-![Alt text](/static/images/Bonus_part5.png)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/Bonus_part5.png?raw=true)
 
 이와 같은 화면이 뜬다면 정상적으로 설치 완료 된 것이다.
 
