@@ -10,8 +10,4 @@ instagram: https://instagram.com/chanwoong1
 github: https://github.com/Chanwoong1
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
-
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+프론트엔드와 데이터 분석에 관심이 있습니다. 나중에 데이터 분석을 웹으로도 손쉽게 할 수 있는 서비스를 만드는 것이 목표입니다. 현재는 React를 잘 사용하기 위한 프로그래밍 언어들을 공부하고 있습니다.
