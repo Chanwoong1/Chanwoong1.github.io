@@ -14,7 +14,7 @@
     <guid>https://google.com/blog/[42seoul]Get_Next_Line</guid>
     <title>[42seoul]Get Next Line</title>
     <link>https://google.com/blog/[42seoul]Get_Next_Line</link>
-    <description>다음 줄을 읽으려면 그냥 개행문자만 찾으면 되는거 아닌가요??</description>
+    <description>다음 줄 읽는건 그냥 개행문자만 찾으면 되는거 아닌가요??</description>
     <pubDate>Fri, 29 Jul 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
     <category>C</category><category>open</category><category>read</category><category>memory leaks</category><category>42seoul</category>
@@ -38,6 +38,16 @@
     <pubDate>Thu, 14 Jul 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
     <category>C</category><category>42seoul</category><category>Makefile</category>
+  </item>
+
+  <item>
+    <guid>https://google.com/blog/persona_project</guid>
+    <title>데이터 분석을 통한 이용 고객 페르소나 정의</title>
+    <link>https://google.com/blog/persona_project</link>
+    <description>데이터를 통해 고객 페르소나를 정의하고, 활용하는 방안을 생각해보았습니다.</description>
+    <pubDate>Fri, 15 Oct 2021 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>python</category>
   </item>
 
   <item>
