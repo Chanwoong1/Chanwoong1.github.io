@@ -1,7 +1,7 @@
 ---
-title: '[42seoul]Get Next Line'
+title: '[42seoul] Get Next Line'
 date: '2022-07-29'
-tags: ['C', 'open', 'read', 'memory leaks', '42seoul']
+tags: ['1st_circle', 'C', 'open', 'read', 'memory leaks', '42seoul']
 draft: false
 summary: 다음 줄 읽는건 그냥 개행문자만 찾으면 되는거 아닌가요??
 layout: PostSimple
@@ -223,3 +223,9 @@ mandatory part를 끝낸 후, 배열로 bonus part를 해결하는 것은 생각
 처음에는 mandatory 코드를 수정하여 구현했는데, 결과는 잘 출력되지만, 메모리 누수를 잡는것이 굉장히 어려웠고, 처음부터 다시 코드를 짜게 되었다.
 
 보너스 부분을 수행하는데만 3일이 넘게 걸린것같은데 그만큼 배울것도 알아가는것도 많았던 과제였다.
+
+## reference
+
+[Static Variables in C](https://www.geeksforgeeks.org/static-variables-in-c/)
+
+[read](https://man7.org/linux/man-pages/man2/read.2.html)

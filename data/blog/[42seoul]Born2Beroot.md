@@ -1,7 +1,7 @@
 ---
-title: '[42seoul]Born2beroot'
+title: '[42seoul] Born2beroot'
 date: '2022-07-22'
-tags: ['VirtualBox', '42seoul', 'Debian']
+tags: ['1st_circle', 'VirtualBox', '42seoul', 'Debian']
 draft: false
 summary: 가상머신, 하나의 운영체제만 사용하기엔 아쉬우니까.
 layout: PostSimple

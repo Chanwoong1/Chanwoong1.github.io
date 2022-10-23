@@ -1,7 +1,7 @@
 ---
-title: '[42seoul]libft'
+title: '[42seoul] libft'
 date: '2022-07-14'
-tags: ['C', '42seoul', 'Makefile']
+tags: ['0th_circle', 'C', '42seoul', 'Makefile']
 draft: false
 summary: 42서울의 첫 과제, 나만의 라이브러리 만들기
 layout: PostSimple
