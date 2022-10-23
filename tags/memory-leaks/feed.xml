@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>WOONGTECH</title>
+      <link>https://google.com/blog</link>
+      <description>Hi 👋, I&#39;m Chanwoong Jeong.</description>
+      <language>ko</language>
+      <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
+      <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
+      <lastBuildDate>Fri, 29 Jul 2022 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://google.com/tags/memory-leaks/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://google.com/blog/[42seoul]Get_Next_Line</guid>
+    <title>[42seoul]Get Next Line</title>
+    <link>https://google.com/blog/[42seoul]Get_Next_Line</link>
+    <description>다음 줄을 읽으려면 그냥 개행문자만 찾으면 되는거 아닌가요??</description>
+    <pubDate>Fri, 29 Jul 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>C</category><category>open</category><category>read</category><category>memory leaks</category><category>42seoul</category>
+  </item>
+
+    </channel>
+  </rss>
