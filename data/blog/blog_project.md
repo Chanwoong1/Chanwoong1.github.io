@@ -28,7 +28,7 @@ npx create-next-app --typescript
 # --typescript를 입력하지 않으면 javascript로 스크립트가 생성된다.
 ```
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_project/nextjs_create_next_app.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/blog_project/nextjs_create_next_app.png?raw=true)
 
 이런 식으로 폴더가 구성된다. 파일이 많이 생성되지만, 웬만하면 pages에서 코딩을 하게 되니 걱정하지 말자.
 
@@ -41,16 +41,16 @@ npm run dev
 ```
 
 위의 명령어를 통해 로컬 환경에서 웹 페이지를 띄워볼 수 있다.
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_project/blog_project00.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/blog_project/blog_project00.png?raw=true)
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_project/blog_project01.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/blog_project/blog_project01.png?raw=true)
 
 여기서 https://localhost:3000 링크로 들어가면 /pages/index.js에서 설정된 화면이 띄워지게 된다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_project/blog_project02.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/blog_project/blog_project02.png?raw=true)
 
 이 화면이 뜨면 로컬 환경에서 웹 페이지가 제대로 실행되고 있다는 뜻이고, 실시간으로 수정을 하며 자신만의 블로그를 만들 수 있다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_project/blog_project01.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/blog_project/blog_project01.png?raw=true)
 
 /pages/index.js을 수정하면 바로바로 바뀌는걸 볼 수 있다.

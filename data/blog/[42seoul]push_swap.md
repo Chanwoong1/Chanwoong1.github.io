@@ -283,12 +283,12 @@ void	indexing(t_var *stacks)
 
 예를들어 min 그룹과 middle 그룹, max그룹으로 나눈다면(편의상 1, 2, 3 그룹으로 후술) 세 그룹으로 나누기 위한 기준점(pivot)은 두 개가 필요하다. 1과 2그룹을 나누는 p1과 2와 3그룹을 구분짓는 p2가 있다면 p2를 기준으로 a스택에서 p2이하인 노드들을 다 b로 옮겨준다 이 때, 필요한 명령어의 수는 최대 a스택에 담긴 노드의 수이다. 그리고, b스택 내부에서 p1을 기준으로 위 아래로 나누어 준다. 이 때 소비되는 명령어의 수도 b스택에 담긴 노드의 수 정도로 적은 명령어 수를 소비한다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap01.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/push_swap/push_swap01.png?raw=true)
 
 위 작업을 수행하면 다음과 같은 그룹을 형성하게 된다.
 이 때, 마지막 남은 a스택의 3그룹도 3개 정도만 남기고 b로 넘겨준다. 남은 a스택의 3개는 하드코딩으로 정렬을 시킨다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap02.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/push_swap/push_swap02.png?raw=true)
 
 그러면 이런식으로 스택이 쌓이게 되고, 여기서부터 b스택의 노드들을 하나씩 보면서 어떤 노드가 가장 a스택에 적은 명령어를 소모하면서 옮겨지는지 계산한다.
 
@@ -296,21 +296,21 @@ void	indexing(t_var *stacks)
 
 1, 2, 3그룹으로 나누는 정렬을 잘 수행하게 된다면, 그리디 알고리즘을 사용함에 있어 모두 같은 포멧으로 시작하기 때문에 최악의 상황을 가정한 명령어의 수가 많아지는 경우가 사라지게 된다. b스택으로 넘겨주었던 3그룹이 대부분 먼저 넘어오게 되는데, 그 때, 명령어 수를 많이 소비하지 않으면서 넘어오게 된다. 비슷한 값들의 그룹이기 때문이다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap03.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/push_swap/push_swap03.png?raw=true)
 
 그렇지 않은 경우도 존재한다. 1그룹의 경우 rrb 한번으로 pb를 수행할 수 있기 때문에 위와 같이 1그룹도 같이 넘어올 수 있다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap04.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/push_swap/push_swap04.png?raw=true)
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap05.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/push_swap/push_swap05.png?raw=true)
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap06.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/push_swap/push_swap06.png?raw=true)
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap07.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/push_swap/push_swap07.png?raw=true)
 
 이런 식으로 정렬이 진행되고, 마지막 노드가 b에서 a로 옮겨지게 되면 그리디 알고리즘이 끝나게 된다. 마지막으로 ra 혹은 rra를 통해 오름차순으로 만들어주면 된다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap08.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/push_swap/push_swap08.png?raw=true)
 
 정렬이 완료된 모습.
 
@@ -337,3 +337,9 @@ mandatory part를 잘 구현했다면 이번 보너스는 진짜 거저주는 �
 ## 느낀 점
 
 2서클의 벽이라고 하는 push_swap을 먼저 진행하게 되었다. 자료구조를 python으로만 다뤄봐서 C를 이용한 자료구조는 처음 다뤄보았는데, 연결리스트로 다양한 자료구조를 구현할 수 있다는 점이 인상깊었다. 또한, 그리디 알고리즘 말고도 다양한 알고리즘들이 많이 있는데, 이런 알고리즘들도 한번씩 보면서 알고리즘간의 장단점을 파악하고 자신에게 가장 적합한 알고리즘을 찾아 구현해보길 바란다.
+
+## reference
+
+[push_swap visualizer](https://github.com/o-reo/push_swap_visualizer)
+
+[greedy algorithm](https://en.wikipedia.org/wiki/Greedy_algorithm)
