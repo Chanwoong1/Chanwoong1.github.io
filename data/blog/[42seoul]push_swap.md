@@ -23,9 +23,9 @@ layout: PostSimple
   - [진행 과정](#진행-과정)
     - [스택 구현](#스택-구현)
   - [알고리즘](#알고리즘)
-  - [주의 사항](#주의-사항)
-- [Chapter 4](#chapter-5)
+- [Chapter 5](#chapter-5)
   - [Bonus part](#bonus-part)
+- [느낀 점](#느낀-점)
 
 ## Chapter 1
 
@@ -313,3 +313,27 @@ void	indexing(t_var *stacks)
 ![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap08.png?raw=true)
 
 정렬이 완료된 모습.
+
+#### 주의사항
+
+들어오는 인자에 대한 파싱이 중요하다. 예를들어
+
+```
+./push_swap 5 4 3 2 1
+
+./push_swap 5 "4 3 2" 1
+
+./push_swap "5" 4 "   3 2    " 1
+```
+
+등 여러가지 경우가 가능하므로, checker프로그램을 적극적으로 사용하여 예외사항을 찾아보길 바란다.
+
+## Chapter 5
+
+### Bonus part
+
+mandatory part를 잘 구현했다면 이번 보너스는 진짜 거저주는 점수일 것이라 생각한다. 스택 구조를 잘 짰다면 정렬이 되었는지를 판단하는 알고리즘만 짜 주면 되기 때문이다. 자세한 설명은 생략하기로 하겠다.
+
+## 느낀 점
+
+2서클의 벽이라고 하는 push_swap을 먼저 진행하게 되었다. 자료구조를 python으로만 다뤄봐서 C를 이용한 자료구조는 처음 다뤄보았는데, 연결리스트로 다양한 자료구조를 구현할 수 있다는 점이 인상깊었다. 또한, 그리디 알고리즘 말고도 다양한 알고리즘들이 많이 있는데, 이런 알고리즘들도 한번씩 보면서 알고리즘간의 장단점을 파악하고 자신에게 가장 적합한 알고리즘을 찾아 구현해보길 바란다.
