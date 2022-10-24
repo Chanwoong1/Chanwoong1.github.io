@@ -7,9 +7,19 @@
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
-      <lastBuildDate>Sat, 10 Sep 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Tue, 20 Sep 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://google.com/tags/2nd_circle/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://google.com/blog/[42seoul]so_long</guid>
+    <title>[42seoul] so_long</title>
+    <link>https://google.com/blog/[42seoul]so_long</link>
+    <description>귀여운 게임 만들기</description>
+    <pubDate>Tue, 20 Sep 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>2nd_circle</category><category>C</category><category>42seoul</category><category>MLX</category>
+  </item>
+
   <item>
     <guid>https://google.com/blog/[42seoul]pipex</guid>
     <title>[42seoul] pipex</title>
