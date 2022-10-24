@@ -286,3 +286,30 @@ void	indexing(t_var *stacks)
 ![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap01.png?raw=true)
 
 위 작업을 수행하면 다음과 같은 그룹을 형성하게 된다.
+이 때, 마지막 남은 a스택의 3그룹도 3개 정도만 남기고 b로 넘겨준다. 남은 a스택의 3개는 하드코딩으로 정렬을 시킨다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap02.png?raw=true)
+
+그러면 이런식으로 스택이 쌓이게 되고, 여기서부터 b스택의 노드들을 하나씩 보면서 어떤 노드가 가장 a스택에 적은 명령어를 소모하면서 옮겨지는지 계산한다.
+
+**b스택의 노드들을 매 순간마다 전체적으로 다 계산을 해주어야한다는 부분에서 시간복잡도 상으로는 가장 계산이 느릴 수 있다. 하지만 push_swap에서 요구하는 복잡도는 명령어를 최소화하는 방법이기 때문에 그리디 알고리즘을 사용하게 되었다.**
+
+1, 2, 3그룹으로 나누는 정렬을 잘 수행하게 된다면, 그리디 알고리즘을 사용함에 있어 모두 같은 포멧으로 시작하기 때문에 최악의 상황을 가정한 명령어의 수가 많아지는 경우가 사라지게 된다. b스택으로 넘겨주었던 3그룹이 대부분 먼저 넘어오게 되는데, 그 때, 명령어 수를 많이 소비하지 않으면서 넘어오게 된다. 비슷한 값들의 그룹이기 때문이다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap03.png?raw=true)
+
+그렇지 않은 경우도 존재한다. 1그룹의 경우 rrb 한번으로 pb를 수행할 수 있기 때문에 위와 같이 1그룹도 같이 넘어올 수 있다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap04.png?raw=true)
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap05.png?raw=true)
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap06.png?raw=true)
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap07.png?raw=true)
+
+이런 식으로 정렬이 진행되고, 마지막 노드가 b에서 a로 옮겨지게 되면 그리디 알고리즘이 끝나게 된다. 마지막으로 ra 혹은 rra를 통해 오름차순으로 만들어주면 된다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/push_swap/push_swap08.png?raw=true)
+
+정렬이 완료된 모습.
