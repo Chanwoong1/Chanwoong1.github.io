@@ -11,8 +11,6 @@ layout: PostSimple
 
 ## Contents
 
-- [Libft](#libft)
-- [Contents](#contents)
 - [나만의 라이브러리 만들기](#나만의-라이브러리-만들기)
 - [try](#try)
 - [retry](#retry)
