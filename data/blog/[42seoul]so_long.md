@@ -25,6 +25,9 @@ layout: PostSimple
   - [fork](#fork)
 - [Chapter 5](#chapter-5)
   - [Bonus part](#bonus-part)
+    - [Sprite animation](#sprite-animation)
+    - [Enemy](#enemy)
+    - [Movement count on display](#movement-count-on-display)
 - [느낀 점](#느낀-점)
 
 ## Chapter 1
@@ -293,13 +296,18 @@ typedef struct s_obj
 
 위의 방식이면 d 방향으로 8번 눌렀을 때, 64픽셀을 이동하여 멥의 배열을 변경해주는 식으로 구현했다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/so_long/so_long05.png?raw=true)
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/so_long/so_long06.png?raw=true)
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/so_long/so_long07.png?raw=true)
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/so_long/so_long08.png?raw=true)
-
 ![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/so_long/so_long_move01.gif?raw=true)
 
 #### enemy
 
-적 구현은
+적 구현은 기존 맵의 구성요소에 적이 포함되지 않기 때문에 맵 유효성을 해치지 않으면서 적을 구현해야한다고 생각했다. 따라서 '0'인 맵에 임의로 적을 생성하는 방법을 생각했다. 맵의 행과 열을 곱해주면 맵의 전체 칸 수가 나오는데, 난수를 생성해서 전체 칸 수로 나눠준 나머지를 맵의 인덱스로 사용해서 그 칸이 '0'일 경우 적으로 바꾸어 주는 방식으로 진행했다.
+
+적의 움직임 역시 난수를 활용했다. 보너스 과제는 기본 허용 함수 이외의 함수도 사용할 수 있기 때문에 rand()라는 함수를 사용했고, 이것으로 적이 이동할 방향을 결정할 수 있었다. 캐릭터가 한번에 8픽셀만큼 움직이기 때문에 한 칸을 움직이려면 8번을 움직여야 한다. 따라서 적은 캐릭터가 8번 움직일 때마다 한 칸씩 무작위로 이동하도록 구현했다.
+
+#### Movement count on display
+
+화면에 움직인 수를 띄우는 것은 매우 쉽다. mlx_string_put 함수를 이용하여 문자열을 띄울 위치, 색상, 띄울 문자를 정해주면 된다. 참고로 문자열을 만들 때, itoa 함수를 사용할텐데 메모리 누수에 주의하도록 하자.
+
+## 느낀 점
+
+이번 과제는 굉장히 꾸미는데 심혈을 기울인 것 같다. 마음에 드는 캐릭터를 고민하는 것도 시간이 좀 걸렸기 때문이다. 42서울에서의 첫 그래픽 과제였는데, 생각보다 재미있는 과제여서 다음 그래픽 과제인 4서클의 cub3d도 얼른 해보고 싶어졌다.
