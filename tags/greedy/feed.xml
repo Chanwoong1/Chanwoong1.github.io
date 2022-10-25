@@ -11,9 +11,9 @@
       <atom:link href="https://google.com/tags/greedy/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://google.com/blog/[42seoul]push_swap</guid>
+    <guid>https://google.com/blog/42seoul/[42seoul]push_swap</guid>
     <title>[42seoul] push_swap</title>
-    <link>https://google.com/blog/[42seoul]push_swap</link>
+    <link>https://google.com/blog/42seoul/[42seoul]push_swap</link>
     <description>두개의 스택을 이용하여 정렬을 해보자!</description>
     <pubDate>Fri, 26 Aug 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>

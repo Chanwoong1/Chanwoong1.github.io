@@ -11,9 +11,9 @@
       <atom:link href="https://google.com/tags/pipe/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://google.com/blog/[42seoul]pipex</guid>
+    <guid>https://google.com/blog/42seoul/[42seoul]pipex</guid>
     <title>[42seoul] pipex</title>
-    <link>https://google.com/blog/[42seoul]pipex</link>
+    <link>https://google.com/blog/42seoul/[42seoul]pipex</link>
     <description>c로 bash에서의 명령을 해보자!</description>
     <pubDate>Sat, 10 Sep 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>

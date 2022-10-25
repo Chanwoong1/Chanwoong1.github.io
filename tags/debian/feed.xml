@@ -11,9 +11,9 @@
       <atom:link href="https://google.com/tags/debian/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://google.com/blog/[42seoul]Born2Beroot</guid>
+    <guid>https://google.com/blog/42seoul/[42seoul]Born2Beroot</guid>
     <title>[42seoul] Born2beroot</title>
-    <link>https://google.com/blog/[42seoul]Born2Beroot</link>
+    <link>https://google.com/blog/42seoul/[42seoul]Born2Beroot</link>
     <description>가상머신, 하나의 운영체제만 사용하기엔 아쉬우니까.</description>
     <pubDate>Fri, 22 Jul 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>

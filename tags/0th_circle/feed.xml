@@ -11,9 +11,9 @@
       <atom:link href="https://google.com/tags/0th_circle/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://google.com/blog/[42seoul]libft</guid>
+    <guid>https://google.com/blog/42seoul/[42seoul]libft</guid>
     <title>[42seoul] libft</title>
-    <link>https://google.com/blog/[42seoul]libft</link>
+    <link>https://google.com/blog/42seoul/[42seoul]libft</link>
     <description>42서울의 첫 과제, 나만의 라이브러리 만들기</description>
     <pubDate>Thu, 14 Jul 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
