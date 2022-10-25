@@ -298,7 +298,7 @@ typedef struct s_obj
 ![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/so_long/so_long07.png?raw=true)
 ![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/so_long/so_long08.png?raw=true)
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/so_long/so_long_move01.mov?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/so_long/so_long_move01.gif?raw=true)
 
 #### enemy
 
