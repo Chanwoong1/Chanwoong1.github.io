@@ -1,0 +1,1 @@
+{"pageProps":{"posts":[{"title":"[42seoul] Get Next Line","date":"2022-07-29T00:00:00.000Z","tags":["1st_circle","C","open","read","memory leaks","42seoul"],"draft":false,"summary":"다음 줄 읽는건 그냥 개행문자만 찾으면 되는거 아닌가요??","layout":"PostSimple","slug":"[42seoul]Get_Next_Line"}],"tag":"memory-leaks"},"__N_SSG":true}
