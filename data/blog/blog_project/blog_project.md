@@ -1,5 +1,5 @@
 ---
-title: next.js로 개인 블로그 만들기
+title: 'next.js로 개인 블로그 만들기'
 date: '2022-09-21'
 tags: ['next.js', 'blog']
 draft: false
@@ -54,3 +54,5 @@ npm run dev
 ![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/blog_project/blog_project01.png?raw=true)
 
 /pages/index.js을 수정하면 바로바로 바뀌는걸 볼 수 있다.
+
+[github에 개인 페이지 배포하기](https://chanwoong1.github.io/blog/blog_project/github_pages)

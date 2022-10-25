@@ -7,6 +7,8 @@ summary: 블로그 배포
 layout: PostSimple
 ---
 
+[next.js로 개인 블로그 만들기](https://chanwoong1.github.io/blog/blog_project/blog_project)
+
 이번에 만든 블로그를 포스팅하는 작업을 해볼 것이다.
 
 뭔가 쉬운듯 어려운듯 아리송한 상태로 배웠다.
