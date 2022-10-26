@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>WOONGTECH</title>
+      <link>https://google.com/blog</link>
+      <description>Hi 👋, I&#39;m Chanwoong Jeong.</description>
+      <language>ko</language>
+      <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
+      <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
+      <lastBuildDate>Sun, 21 Aug 2022 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://google.com/tags/object/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://google.com/blog/javascript/js_object</guid>
+    <title>자바스크립트에서 객체란 무엇일까</title>
+    <link>https://google.com/blog/javascript/js_object</link>
+    <description>객 체</description>
+    <pubDate>Sun, 21 Aug 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>object</category><category>vanilla js</category>
+  </item>
+
+    </channel>
+  </rss>

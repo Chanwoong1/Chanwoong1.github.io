@@ -71,6 +71,16 @@
   </item>
 
   <item>
+    <guid>https://google.com/blog/javascript/js_object</guid>
+    <title>자바스크립트에서 객체란 무엇일까</title>
+    <link>https://google.com/blog/javascript/js_object</link>
+    <description>객 체</description>
+    <pubDate>Sun, 21 Aug 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>object</category><category>vanilla js</category>
+  </item>
+
+  <item>
     <guid>https://google.com/blog/42seoul/[42seoul]ft_printf</guid>
     <title>[42seoul] ft_printf</title>
     <link>https://google.com/blog/42seoul/[42seoul]ft_printf</link>
@@ -108,6 +118,36 @@
     <pubDate>Thu, 14 Jul 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
     <category>0th_circle</category><category>C</category><category>42seoul</category><category>Makefile</category>
+  </item>
+
+  <item>
+    <guid>https://google.com/blog/javascript/leetcode/1480</guid>
+    <title>1480. Running Sum of 1d Array</title>
+    <link>https://google.com/blog/javascript/leetcode/1480</link>
+    <description>1480. Running Sum of 1d Array</description>
+    <pubDate>Thu, 23 Jun 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>leetcode</category>
+  </item>
+
+  <item>
+    <guid>https://google.com/blog/javascript/leetcode/724</guid>
+    <title>724. Find Pivot Index</title>
+    <link>https://google.com/blog/javascript/leetcode/724</link>
+    <description>724. Find Pivot Index</description>
+    <pubDate>Thu, 23 Jun 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>leetcode</category>
+  </item>
+
+  <item>
+    <guid>https://google.com/blog/javascript/js_main</guid>
+    <title>자바스크립트 공부 시작</title>
+    <link>https://google.com/blog/javascript/js_main</link>
+    <description>js 솔플</description>
+    <pubDate>Tue, 21 Jun 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category>
   </item>
 
   <item>

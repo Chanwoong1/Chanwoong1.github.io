@@ -1,0 +1,34 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>WOONGTECH</title>
+      <link>https://google.com/blog</link>
+      <description>Hi 👋, I&#39;m Chanwoong Jeong.</description>
+      <language>ko</language>
+      <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
+      <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
+      <lastBuildDate>Thu, 23 Jun 2022 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://google.com/tags/leetcode/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://google.com/blog/javascript/leetcode/1480</guid>
+    <title>1480. Running Sum of 1d Array</title>
+    <link>https://google.com/blog/javascript/leetcode/1480</link>
+    <description>1480. Running Sum of 1d Array</description>
+    <pubDate>Thu, 23 Jun 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>leetcode</category>
+  </item>
+
+  <item>
+    <guid>https://google.com/blog/javascript/leetcode/724</guid>
+    <title>724. Find Pivot Index</title>
+    <link>https://google.com/blog/javascript/leetcode/724</link>
+    <description>724. Find Pivot Index</description>
+    <pubDate>Thu, 23 Jun 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>leetcode</category>
+  </item>
+
+    </channel>
+  </rss>
