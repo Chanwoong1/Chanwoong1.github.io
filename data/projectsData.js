@@ -12,10 +12,16 @@ const projectsData = [
     href: '/tags/42seoul',
   },
   {
+    title: '자바스크립트 leetcode',
+    description: `많이 풀어보기`,
+    imgSrc: '/static/images/blog_posts/javascript/leetcode_logo.png',
+    href: '/tags/leetcode',
+  },
+  {
     title: '자바스크립트 독학',
     description: `혼자 부딪히고 함께 아파해보기`,
     imgSrc: '/static/images/blog_posts/javascript/js_logo.png',
-    href: '/blog/javascript/js_main',
+    href: '/tags/vanilla-js',
   },
   {
     title: '이용 고객 페르소나 정의',
