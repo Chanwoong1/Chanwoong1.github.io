@@ -131,9 +131,29 @@
   </item>
 
   <item>
+    <guid>https://google.com/blog/javascript/leetcode/217</guid>
+    <title>217. Contains Duplicate</title>
+    <link>https://google.com/blog/javascript/leetcode/217</link>
+    <description>leetcode</description>
+    <pubDate>Sun, 26 Jun 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>leetcode</category>
+  </item>
+
+  <item>
     <guid>https://google.com/blog/javascript/leetcode/409</guid>
     <title>409. Longest Palindrome</title>
     <link>https://google.com/blog/javascript/leetcode/409</link>
+    <description>leetcode</description>
+    <pubDate>Sun, 26 Jun 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>leetcode</category>
+  </item>
+
+  <item>
+    <guid>https://google.com/blog/javascript/leetcode/53</guid>
+    <title>53. Maximum Subarray</title>
+    <link>https://google.com/blog/javascript/leetcode/53</link>
     <description>leetcode</description>
     <pubDate>Sun, 26 Jun 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
