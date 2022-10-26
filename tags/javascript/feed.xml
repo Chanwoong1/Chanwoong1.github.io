@@ -21,6 +21,46 @@
   </item>
 
   <item>
+    <guid>https://google.com/blog/javascript/leetcode/142</guid>
+    <title>142. Linked List Cycle II</title>
+    <link>https://google.com/blog/javascript/leetcode/142</link>
+    <description>leetcode</description>
+    <pubDate>Sat, 25 Jun 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>leetcode</category>
+  </item>
+
+  <item>
+    <guid>https://google.com/blog/javascript/leetcode/876</guid>
+    <title>876. Middle of the Linked List</title>
+    <link>https://google.com/blog/javascript/leetcode/876</link>
+    <description>leetcode</description>
+    <pubDate>Sat, 25 Jun 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>leetcode</category>
+  </item>
+
+  <item>
+    <guid>https://google.com/blog/javascript/leetcode/205</guid>
+    <title>205. Isomorphic Strings</title>
+    <link>https://google.com/blog/javascript/leetcode/205</link>
+    <description>leetcode</description>
+    <pubDate>Fri, 24 Jun 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>leetcode</category>
+  </item>
+
+  <item>
+    <guid>https://google.com/blog/javascript/leetcode/392</guid>
+    <title>392. Is Subsequence</title>
+    <link>https://google.com/blog/javascript/leetcode/392</link>
+    <description>leetcode</description>
+    <pubDate>Fri, 24 Jun 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>leetcode</category>
+  </item>
+
+  <item>
     <guid>https://google.com/blog/javascript/leetcode/1480</guid>
     <title>1480. Running Sum of 1d Array</title>
     <link>https://google.com/blog/javascript/leetcode/1480</link>
@@ -47,7 +87,7 @@
     <description>js 솔플</description>
     <pubDate>Tue, 21 Jun 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
-    <category>javascript</category>
+    <category>javascript</category><category>vanilla js</category>
   </item>
 
     </channel>

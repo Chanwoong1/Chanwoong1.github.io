@@ -20,5 +20,15 @@
     <category>javascript</category><category>object</category><category>vanilla js</category>
   </item>
 
+  <item>
+    <guid>https://google.com/blog/javascript/js_main</guid>
+    <title>자바스크립트 공부 시작</title>
+    <link>https://google.com/blog/javascript/js_main</link>
+    <description>js 솔플</description>
+    <pubDate>Tue, 21 Jun 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>vanilla js</category>
+  </item>
+
     </channel>
   </rss>
