@@ -121,6 +121,26 @@
   </item>
 
   <item>
+    <guid>https://google.com/blog/javascript/leetcode/121</guid>
+    <title>121. Best Time to Buy and Sell Stock</title>
+    <link>https://google.com/blog/javascript/leetcode/121</link>
+    <description>leetcode</description>
+    <pubDate>Sun, 26 Jun 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>leetcode</category>
+  </item>
+
+  <item>
+    <guid>https://google.com/blog/javascript/leetcode/409</guid>
+    <title>409. Longest Palindrome</title>
+    <link>https://google.com/blog/javascript/leetcode/409</link>
+    <description>leetcode</description>
+    <pubDate>Sun, 26 Jun 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>leetcode</category>
+  </item>
+
+  <item>
     <guid>https://google.com/blog/javascript/leetcode/142</guid>
     <title>142. Linked List Cycle II</title>
     <link>https://google.com/blog/javascript/leetcode/142</link>
