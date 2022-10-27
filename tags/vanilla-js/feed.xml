@@ -7,9 +7,19 @@
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
-      <lastBuildDate>Sun, 21 Aug 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Tue, 23 Aug 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://chanwoong1.github.io/tags/vanilla-js/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://chanwoong1.github.io/blog/javascript/js_array</guid>
+    <title>자바스크립트에서 배열이란 무엇일까</title>
+    <link>https://chanwoong1.github.io/blog/javascript/js_array</link>
+    <description>배 열</description>
+    <pubDate>Tue, 23 Aug 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>array</category><category>vanilla js</category>
+  </item>
+
   <item>
     <guid>https://chanwoong1.github.io/blog/javascript/js_object</guid>
     <title>자바스크립트에서 객체란 무엇일까</title>
