@@ -1,0 +1,1 @@
+{"pageProps":{"posts":[{"title":"따릉이 데이터를 활용한 데이터 분석","date":"2021-07-30T00:00:00.000Z","tags":["python","scikit-learn","pandas","ml"],"draft":false,"summary":"각 날짜의 1시간 전의 기상상황을 가지고 1시간 후의 따릉이 대여수를 예측하세요","layout":"PostSimple","slug":"dacon/bicycle_predict"}],"tag":"ml"},"__N_SSG":true}
