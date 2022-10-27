@@ -9,6 +9,6 @@ layout: PostSimple
 
 이전 글
 
-- [우테코 시작]()
+- [우테코 시작](https://chanwoong1.github.io/blog/woowacourse/precourse_main)
 
 1주차의 과제를 받아보니, 굉장히 친절한 시스템으로 과제 채점과 제출을 할 수 있도록 하였다.

@@ -15,4 +15,4 @@ layout: PostSimple
 
 자세한 내용은 이곳에
 
-- [1주차]()
+- [1주차](https://chanwoong1.github.io/blog/woowacourse/precourse_week1)
