@@ -5,8 +5,8 @@ const siteMetadata = {
   description: "Hi 👋, I'm Chanwoong Jeong.",
   language: 'ko',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://google.com',
-  siteRepo: 'https://github.com/chanwoong1',
+  siteUrl: 'https://chanwoong1.github.io',
+  siteRepo: 'https://github.com/chanwoong1/chanwoong1.github.io',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.gif',
   socialBanner: '/static/images/twitter-card.png',
