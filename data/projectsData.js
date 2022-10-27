@@ -27,7 +27,7 @@ const projectsData = [
     title: '자바스크립트 독학',
     description: `혼자 부딪히고 함께 아파해보기`,
     imgSrc: '/static/images/blog_posts/javascript/js_logo.png',
-    href: '/tags/vanilla-js',
+    href: '/blog/javascript/js_main',
   },
   {
     title: '이용 고객 페르소나 정의',
