@@ -29,6 +29,12 @@ const projectsData = [
     imgSrc: '/static/images/blog_posts/persona_project/persona_project.png',
     href: '/blog/persona_project',
   },
+  {
+    title: '따릉이 데이터를 활용한 데이터 분석',
+    description: `데이터 분석 첫 걸음`,
+    imgSrc: '/static/images/blog_posts/bicycle_predict/bicycle_project.jpeg',
+    href: '/blog/dacon/bicycle_predict',
+  },
 ]
 
 export default projectsData
