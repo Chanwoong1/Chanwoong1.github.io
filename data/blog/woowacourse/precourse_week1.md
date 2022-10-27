@@ -13,6 +13,7 @@ layout: PostSimple
 
 1주차의 과제를 받아보니, 굉장히 친절한 시스템으로 과제 채점과 제출을 할 수 있도록 하였다.
 
+```
 function validateArg(arg) {
 if (arg.length !== 2) return 0;
 if (typeof arg[0] !== "number" || typeof arg[1] !== "number") return 0;
@@ -46,3 +47,4 @@ console.log(problem1([99, 100], [211, '212'])); // #4
 console.log(problem1([2, 3], [211, 212])); // #5
 console.log(problem1([101, 102], [399, 400])); // #6
 console.log(problem1([99, 102], [398, 399])); // #7
+```
