@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'WOONGTECH',
   author: 'Chanwoong Jeong',
   headerTitle: 'WOONGTECH',
-  description: "Hi 👋, I'm Chanwoong Jeong.",
+  description: '내 발자취 기록하기',
   language: 'ko',
   theme: 'system', // system, dark or light
   siteUrl: 'https://chanwoong1.github.io',
