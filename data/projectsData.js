@@ -1,5 +1,11 @@
 const projectsData = [
   {
+    title: '우테코 프리코스',
+    description: `4주간의 내 발자취 기록하기`,
+    imgSrc: '/static/images/blog_posts/woowacourse/woowacourse_project_img.png',
+    href: '/blog/woowacourse/precourse_main',
+  },
+  {
     title: '블로그 페이지 만들기',
     description: `나만의 블로그로 내 지식 공유하기`,
     imgSrc: '/static/images/blog_posts/blog_project/nextjs.png',
