@@ -46,3 +46,25 @@ matplotlib.rcParams['axes.unicode_minus'] = False
 import warnings
 warnings.simplefilter('ignore')
 ```
+
+먼저 사용할 라이브러리와 기타 설정들을 불러와주었다.
+
+```python
+train = pd.read_csv('data/train.csv')
+test = pd.read_csv('data/test.csv')
+submission = pd.read_csv('data/submission.csv')
+display(train.head().T, test.head().T)
+```
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/bicycle_predict/image01.png?raw=true)
+
+- id : 날짜와 시간별 id
+- hour_bef_temperature : 1시간 전 기온
+- hour_bef_precipitation : 1시간 전 비 정보, 비가 오지 않았으면 0, 비가 오면 1
+- hour_bef_windspeed : 1시간 전 풍속(평균)
+- hour_bef_humidity : 1시간 전 습도
+- hour_bef_visibility : 1시간 전 시정(視程), 시계(視界)(특정 기상 상태에 따른 가시성을 의미)
+- hour_bef_ozone : 1시간 전 오존
+- hour_bef_pm10 : 1시간 전 미세먼지(머리카락 굵기의 1/5에서 1/7 크기의 미세먼지)
+- hour_bef_pm2.5 : 1시간 전 미세먼지(머리카락 굵기의 1/20에서 1/30 크기의 미세먼지)
+- count : 시간에 따른 따릉이 대여 수
