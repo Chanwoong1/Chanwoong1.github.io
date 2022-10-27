@@ -7,9 +7,29 @@
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
-      <lastBuildDate>Sat, 15 Oct 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 27 Oct 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://chanwoong1.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://chanwoong1.github.io/blog/woowacourse/precourse_week1</guid>
+    <title>우테코 프리코스 1주차</title>
+    <link>https://chanwoong1.github.io/blog/woowacourse/precourse_week1</link>
+    <description>4주간 열심히 해보겠습니다.</description>
+    <pubDate>Thu, 27 Oct 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>woowacourse</category>
+  </item>
+
+  <item>
+    <guid>https://chanwoong1.github.io/blog/woowacourse/precourse_main</guid>
+    <title>우테코 프리코스 시작</title>
+    <link>https://chanwoong1.github.io/blog/woowacourse/precourse_main</link>
+    <description>4주간 열심히 해보겠습니다.</description>
+    <pubDate>Wed, 26 Oct 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>woowacourse</category>
+  </item>
+
   <item>
     <guid>https://chanwoong1.github.io/blog/blog_project/github_pages</guid>
     <title>github에 개인 페이지 배포하기</title>
