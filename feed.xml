@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>WOONGTECH</title>
-      <link>https://google.com/blog</link>
+      <link>https://chanwoong1.github.io/blog</link>
       <description>Hi 👋, I&#39;m Chanwoong Jeong.</description>
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
       <lastBuildDate>Sat, 15 Oct 2022 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://google.com/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://chanwoong1.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://google.com/blog/blog_project/github_pages</guid>
+    <guid>https://chanwoong1.github.io/blog/blog_project/github_pages</guid>
     <title>github에 개인 페이지 배포하기</title>
-    <link>https://google.com/blog/blog_project/github_pages</link>
+    <link>https://chanwoong1.github.io/blog/blog_project/github_pages</link>
     <description>블로그 배포</description>
     <pubDate>Sat, 15 Oct 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -21,9 +21,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]philosophers</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]philosophers</guid>
     <title>[42seoul] philosophers</title>
-    <link>https://google.com/blog/42seoul/[42seoul]philosophers</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]philosophers</link>
     <description>철학자들에게 밥을 먹이자</description>
     <pubDate>Sat, 08 Oct 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -31,9 +31,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/blog_project/blog_project</guid>
+    <guid>https://chanwoong1.github.io/blog/blog_project/blog_project</guid>
     <title>next.js로 개인 블로그 만들기</title>
-    <link>https://google.com/blog/blog_project/blog_project</link>
+    <link>https://chanwoong1.github.io/blog/blog_project/blog_project</link>
     <description>next.js로 개인 블로그 만들기</description>
     <pubDate>Wed, 21 Sep 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -41,9 +41,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]so_long</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]so_long</guid>
     <title>[42seoul] so_long</title>
-    <link>https://google.com/blog/42seoul/[42seoul]so_long</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]so_long</link>
     <description>귀여운 게임 만들기</description>
     <pubDate>Tue, 20 Sep 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -51,9 +51,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]pipex</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]pipex</guid>
     <title>[42seoul] pipex</title>
-    <link>https://google.com/blog/42seoul/[42seoul]pipex</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]pipex</link>
     <description>c로 bash에서의 명령을 해보자!</description>
     <pubDate>Sat, 10 Sep 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -61,9 +61,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]push_swap</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]push_swap</guid>
     <title>[42seoul] push_swap</title>
-    <link>https://google.com/blog/42seoul/[42seoul]push_swap</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]push_swap</link>
     <description>두개의 스택을 이용하여 정렬을 해보자!</description>
     <pubDate>Fri, 26 Aug 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -71,9 +71,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/javascript/js_object</guid>
+    <guid>https://chanwoong1.github.io/blog/javascript/js_object</guid>
     <title>자바스크립트에서 객체란 무엇일까</title>
-    <link>https://google.com/blog/javascript/js_object</link>
+    <link>https://chanwoong1.github.io/blog/javascript/js_object</link>
     <description>객 체</description>
     <pubDate>Sun, 21 Aug 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -81,9 +81,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]ft_printf</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]ft_printf</guid>
     <title>[42seoul] ft_printf</title>
-    <link>https://google.com/blog/42seoul/[42seoul]ft_printf</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]ft_printf</link>
     <description>write만 쓰기엔 표현해야할 것이 많다.</description>
     <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -91,9 +91,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]Get_Next_Line</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]Get_Next_Line</guid>
     <title>[42seoul] Get Next Line</title>
-    <link>https://google.com/blog/42seoul/[42seoul]Get_Next_Line</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]Get_Next_Line</link>
     <description>다음 줄 읽는건 그냥 개행문자만 찾으면 되는거 아닌가요??</description>
     <pubDate>Fri, 29 Jul 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -101,9 +101,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]Born2Beroot</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]Born2Beroot</guid>
     <title>[42seoul] Born2beroot</title>
-    <link>https://google.com/blog/42seoul/[42seoul]Born2Beroot</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]Born2Beroot</link>
     <description>가상머신, 하나의 운영체제만 사용하기엔 아쉬우니까.</description>
     <pubDate>Fri, 22 Jul 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -111,9 +111,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]libft</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]libft</guid>
     <title>[42seoul] libft</title>
-    <link>https://google.com/blog/42seoul/[42seoul]libft</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]libft</link>
     <description>42서울의 첫 과제, 나만의 라이브러리 만들기</description>
     <pubDate>Thu, 14 Jul 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -121,9 +121,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/javascript/leetcode/121</guid>
+    <guid>https://chanwoong1.github.io/blog/javascript/leetcode/121</guid>
     <title>121. Best Time to Buy and Sell Stock</title>
-    <link>https://google.com/blog/javascript/leetcode/121</link>
+    <link>https://chanwoong1.github.io/blog/javascript/leetcode/121</link>
     <description>leetcode</description>
     <pubDate>Sun, 26 Jun 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -131,9 +131,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/javascript/leetcode/217</guid>
+    <guid>https://chanwoong1.github.io/blog/javascript/leetcode/217</guid>
     <title>217. Contains Duplicate</title>
-    <link>https://google.com/blog/javascript/leetcode/217</link>
+    <link>https://chanwoong1.github.io/blog/javascript/leetcode/217</link>
     <description>leetcode</description>
     <pubDate>Sun, 26 Jun 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -141,9 +141,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/javascript/leetcode/409</guid>
+    <guid>https://chanwoong1.github.io/blog/javascript/leetcode/409</guid>
     <title>409. Longest Palindrome</title>
-    <link>https://google.com/blog/javascript/leetcode/409</link>
+    <link>https://chanwoong1.github.io/blog/javascript/leetcode/409</link>
     <description>leetcode</description>
     <pubDate>Sun, 26 Jun 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -151,9 +151,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/javascript/leetcode/53</guid>
+    <guid>https://chanwoong1.github.io/blog/javascript/leetcode/53</guid>
     <title>53. Maximum Subarray</title>
-    <link>https://google.com/blog/javascript/leetcode/53</link>
+    <link>https://chanwoong1.github.io/blog/javascript/leetcode/53</link>
     <description>leetcode</description>
     <pubDate>Sun, 26 Jun 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -161,9 +161,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/javascript/leetcode/142</guid>
+    <guid>https://chanwoong1.github.io/blog/javascript/leetcode/142</guid>
     <title>142. Linked List Cycle II</title>
-    <link>https://google.com/blog/javascript/leetcode/142</link>
+    <link>https://chanwoong1.github.io/blog/javascript/leetcode/142</link>
     <description>leetcode</description>
     <pubDate>Sat, 25 Jun 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -171,9 +171,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/javascript/leetcode/876</guid>
+    <guid>https://chanwoong1.github.io/blog/javascript/leetcode/876</guid>
     <title>876. Middle of the Linked List</title>
-    <link>https://google.com/blog/javascript/leetcode/876</link>
+    <link>https://chanwoong1.github.io/blog/javascript/leetcode/876</link>
     <description>leetcode</description>
     <pubDate>Sat, 25 Jun 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -181,9 +181,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/javascript/leetcode/205</guid>
+    <guid>https://chanwoong1.github.io/blog/javascript/leetcode/205</guid>
     <title>205. Isomorphic Strings</title>
-    <link>https://google.com/blog/javascript/leetcode/205</link>
+    <link>https://chanwoong1.github.io/blog/javascript/leetcode/205</link>
     <description>leetcode</description>
     <pubDate>Fri, 24 Jun 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -191,9 +191,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/javascript/leetcode/392</guid>
+    <guid>https://chanwoong1.github.io/blog/javascript/leetcode/392</guid>
     <title>392. Is Subsequence</title>
-    <link>https://google.com/blog/javascript/leetcode/392</link>
+    <link>https://chanwoong1.github.io/blog/javascript/leetcode/392</link>
     <description>leetcode</description>
     <pubDate>Fri, 24 Jun 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -201,9 +201,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/javascript/leetcode/1480</guid>
+    <guid>https://chanwoong1.github.io/blog/javascript/leetcode/1480</guid>
     <title>1480. Running Sum of 1d Array</title>
-    <link>https://google.com/blog/javascript/leetcode/1480</link>
+    <link>https://chanwoong1.github.io/blog/javascript/leetcode/1480</link>
     <description>1480. Running Sum of 1d Array</description>
     <pubDate>Thu, 23 Jun 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -211,9 +211,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/javascript/leetcode/724</guid>
+    <guid>https://chanwoong1.github.io/blog/javascript/leetcode/724</guid>
     <title>724. Find Pivot Index</title>
-    <link>https://google.com/blog/javascript/leetcode/724</link>
+    <link>https://chanwoong1.github.io/blog/javascript/leetcode/724</link>
     <description>724. Find Pivot Index</description>
     <pubDate>Thu, 23 Jun 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -221,9 +221,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/javascript/js_main</guid>
+    <guid>https://chanwoong1.github.io/blog/javascript/js_main</guid>
     <title>자바스크립트 공부 시작</title>
-    <link>https://google.com/blog/javascript/js_main</link>
+    <link>https://chanwoong1.github.io/blog/javascript/js_main</link>
     <description>js 솔플</description>
     <pubDate>Tue, 21 Jun 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -231,9 +231,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/persona_project</guid>
+    <guid>https://chanwoong1.github.io/blog/persona_project</guid>
     <title>데이터 분석을 통한 이용 고객 페르소나 정의</title>
-    <link>https://google.com/blog/persona_project</link>
+    <link>https://chanwoong1.github.io/blog/persona_project</link>
     <description>데이터를 통해 고객 페르소나를 정의하고, 활용하는 방안을 생각해보았습니다.</description>
     <pubDate>Sun, 24 Oct 2021 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -241,9 +241,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/dacon/bicycle_predict</guid>
+    <guid>https://chanwoong1.github.io/blog/dacon/bicycle_predict</guid>
     <title>따릉이 데이터를 활용한 데이터 분석</title>
-    <link>https://google.com/blog/dacon/bicycle_predict</link>
+    <link>https://chanwoong1.github.io/blog/dacon/bicycle_predict</link>
     <description>각 날짜의 1시간 전의 기상상황을 가지고 1시간 후의 따릉이 대여수를 예측하세요</description>
     <pubDate>Fri, 30 Jul 2021 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>

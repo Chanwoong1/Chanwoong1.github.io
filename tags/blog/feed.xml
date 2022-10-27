@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>WOONGTECH</title>
-      <link>https://google.com/blog</link>
+      <link>https://chanwoong1.github.io/blog</link>
       <description>Hi 👋, I&#39;m Chanwoong Jeong.</description>
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
       <lastBuildDate>Sat, 15 Oct 2022 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://google.com/tags/blog/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://chanwoong1.github.io/tags/blog/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://google.com/blog/blog_project/github_pages</guid>
+    <guid>https://chanwoong1.github.io/blog/blog_project/github_pages</guid>
     <title>github에 개인 페이지 배포하기</title>
-    <link>https://google.com/blog/blog_project/github_pages</link>
+    <link>https://chanwoong1.github.io/blog/blog_project/github_pages</link>
     <description>블로그 배포</description>
     <pubDate>Sat, 15 Oct 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -21,9 +21,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/blog_project/blog_project</guid>
+    <guid>https://chanwoong1.github.io/blog/blog_project/blog_project</guid>
     <title>next.js로 개인 블로그 만들기</title>
-    <link>https://google.com/blog/blog_project/blog_project</link>
+    <link>https://chanwoong1.github.io/blog/blog_project/blog_project</link>
     <description>next.js로 개인 블로그 만들기</description>
     <pubDate>Wed, 21 Sep 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>

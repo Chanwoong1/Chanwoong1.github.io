@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>WOONGTECH</title>
-      <link>https://google.com/blog</link>
+      <link>https://chanwoong1.github.io/blog</link>
       <description>Hi 👋, I&#39;m Chanwoong Jeong.</description>
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
       <lastBuildDate>Sat, 08 Oct 2022 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://google.com/tags/3rd_circle/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://chanwoong1.github.io/tags/3rd_circle/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]philosophers</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]philosophers</guid>
     <title>[42seoul] philosophers</title>
-    <link>https://google.com/blog/42seoul/[42seoul]philosophers</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]philosophers</link>
     <description>철학자들에게 밥을 먹이자</description>
     <pubDate>Sat, 08 Oct 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>

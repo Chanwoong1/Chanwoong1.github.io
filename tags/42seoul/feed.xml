@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>WOONGTECH</title>
-      <link>https://google.com/blog</link>
+      <link>https://chanwoong1.github.io/blog</link>
       <description>Hi 👋, I&#39;m Chanwoong Jeong.</description>
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
       <lastBuildDate>Sat, 08 Oct 2022 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://google.com/tags/42seoul/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://chanwoong1.github.io/tags/42seoul/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]philosophers</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]philosophers</guid>
     <title>[42seoul] philosophers</title>
-    <link>https://google.com/blog/42seoul/[42seoul]philosophers</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]philosophers</link>
     <description>철학자들에게 밥을 먹이자</description>
     <pubDate>Sat, 08 Oct 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -21,9 +21,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]so_long</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]so_long</guid>
     <title>[42seoul] so_long</title>
-    <link>https://google.com/blog/42seoul/[42seoul]so_long</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]so_long</link>
     <description>귀여운 게임 만들기</description>
     <pubDate>Tue, 20 Sep 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -31,9 +31,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]pipex</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]pipex</guid>
     <title>[42seoul] pipex</title>
-    <link>https://google.com/blog/42seoul/[42seoul]pipex</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]pipex</link>
     <description>c로 bash에서의 명령을 해보자!</description>
     <pubDate>Sat, 10 Sep 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -41,9 +41,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]push_swap</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]push_swap</guid>
     <title>[42seoul] push_swap</title>
-    <link>https://google.com/blog/42seoul/[42seoul]push_swap</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]push_swap</link>
     <description>두개의 스택을 이용하여 정렬을 해보자!</description>
     <pubDate>Fri, 26 Aug 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -51,9 +51,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]ft_printf</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]ft_printf</guid>
     <title>[42seoul] ft_printf</title>
-    <link>https://google.com/blog/42seoul/[42seoul]ft_printf</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]ft_printf</link>
     <description>write만 쓰기엔 표현해야할 것이 많다.</description>
     <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -61,9 +61,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]Get_Next_Line</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]Get_Next_Line</guid>
     <title>[42seoul] Get Next Line</title>
-    <link>https://google.com/blog/42seoul/[42seoul]Get_Next_Line</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]Get_Next_Line</link>
     <description>다음 줄 읽는건 그냥 개행문자만 찾으면 되는거 아닌가요??</description>
     <pubDate>Fri, 29 Jul 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -71,9 +71,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]Born2Beroot</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]Born2Beroot</guid>
     <title>[42seoul] Born2beroot</title>
-    <link>https://google.com/blog/42seoul/[42seoul]Born2Beroot</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]Born2Beroot</link>
     <description>가상머신, 하나의 운영체제만 사용하기엔 아쉬우니까.</description>
     <pubDate>Fri, 22 Jul 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -81,9 +81,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]libft</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]libft</guid>
     <title>[42seoul] libft</title>
-    <link>https://google.com/blog/42seoul/[42seoul]libft</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]libft</link>
     <description>42서울의 첫 과제, 나만의 라이브러리 만들기</description>
     <pubDate>Thu, 14 Jul 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>

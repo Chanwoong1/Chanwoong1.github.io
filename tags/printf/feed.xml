@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>WOONGTECH</title>
-      <link>https://google.com/blog</link>
+      <link>https://chanwoong1.github.io/blog</link>
       <description>Hi 👋, I&#39;m Chanwoong Jeong.</description>
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
       <lastBuildDate>Tue, 09 Aug 2022 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://google.com/tags/printf/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://chanwoong1.github.io/tags/printf/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://google.com/blog/42seoul/[42seoul]ft_printf</guid>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]ft_printf</guid>
     <title>[42seoul] ft_printf</title>
-    <link>https://google.com/blog/42seoul/[42seoul]ft_printf</link>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]ft_printf</link>
     <description>write만 쓰기엔 표현해야할 것이 많다.</description>
     <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>

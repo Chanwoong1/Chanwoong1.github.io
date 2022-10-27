@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>WOONGTECH</title>
-      <link>https://google.com/blog</link>
+      <link>https://chanwoong1.github.io/blog</link>
       <description>Hi 👋, I&#39;m Chanwoong Jeong.</description>
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
       <lastBuildDate>Sun, 24 Oct 2021 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://google.com/tags/python/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://chanwoong1.github.io/tags/python/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://google.com/blog/persona_project</guid>
+    <guid>https://chanwoong1.github.io/blog/persona_project</guid>
     <title>데이터 분석을 통한 이용 고객 페르소나 정의</title>
-    <link>https://google.com/blog/persona_project</link>
+    <link>https://chanwoong1.github.io/blog/persona_project</link>
     <description>데이터를 통해 고객 페르소나를 정의하고, 활용하는 방안을 생각해보았습니다.</description>
     <pubDate>Sun, 24 Oct 2021 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
@@ -21,9 +21,9 @@
   </item>
 
   <item>
-    <guid>https://google.com/blog/dacon/bicycle_predict</guid>
+    <guid>https://chanwoong1.github.io/blog/dacon/bicycle_predict</guid>
     <title>따릉이 데이터를 활용한 데이터 분석</title>
-    <link>https://google.com/blog/dacon/bicycle_predict</link>
+    <link>https://chanwoong1.github.io/blog/dacon/bicycle_predict</link>
     <description>각 날짜의 1시간 전의 기상상황을 가지고 1시간 후의 따릉이 대여수를 예측하세요</description>
     <pubDate>Fri, 30 Jul 2021 00:00:00 GMT</pubDate>
     <author>jcw7468@naver.com (Chanwoong Jeong)</author>
