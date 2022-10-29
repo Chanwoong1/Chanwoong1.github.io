@@ -7,9 +7,19 @@
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
-      <lastBuildDate>Sun, 26 Jun 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Mon, 27 Jun 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://chanwoong1.github.io/tags/leetcode/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://chanwoong1.github.io/blog/javascript/leetcode/589</guid>
+    <title>589. N-ary Tree Preorder Traversal</title>
+    <link>https://chanwoong1.github.io/blog/javascript/leetcode/589</link>
+    <description>589. N-ary Tree Preorder Traversal</description>
+    <pubDate>Mon, 27 Jun 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>leetcode</category>
+  </item>
+
   <item>
     <guid>https://chanwoong1.github.io/blog/javascript/leetcode/121</guid>
     <title>121. Best Time to Buy and Sell Stock</title>
