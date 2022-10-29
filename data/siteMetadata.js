@@ -9,7 +9,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/chanwoong1/chanwoong1.github.io',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.gif',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/logo.png',
   email: 'jcw7468@naver.com',
   github: 'https://github.com/Chanwoong1',
   instagram: 'https://instagram.com/chanwoong1',
