@@ -6,6 +6,11 @@ export default function Footer() {
   return (
     <footer>
       <div className="mt-10 flex flex-col items-center">
+        <div className="mb-5">
+          <a href="https://hits.seeyoufarm.com">
+            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fchanwoong1.github.io&count_bg=%23000000&title_bg=%23000000&icon=&icon_color=%23C5C5C5&title=hits&edge_flat=true" />
+          </a>
+        </div>
         <div className="mb-5 text-sm text-gray-500 dark:text-gray-400">
           <Link href="/blog">Blog</Link>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

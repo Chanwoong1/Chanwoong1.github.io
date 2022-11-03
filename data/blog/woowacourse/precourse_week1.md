@@ -3,7 +3,7 @@ title: '우테코 프리코스 1주차'
 date: '2022-10-31'
 tags: ['javascript', 'woowacourse']
 draft: false
-summary: 4주간 열심히 해보겠습니다.
+summary: 요구 사항 및 제한사항 숙지 후 여러가지 과제 풀어보기
 layout: PostSimple
 ---
 
