@@ -7,9 +7,29 @@
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
-      <lastBuildDate>Thu, 25 Aug 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Wed, 28 Sep 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://chanwoong1.github.io/tags/vanilla-js/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://chanwoong1.github.io/blog/javascript/js_ asynchronous</guid>
+    <title>자바스크립트 비동기 프로그래밍</title>
+    <link>https://chanwoong1.github.io/blog/javascript/js_ asynchronous</link>
+    <description>비동기란 무엇인가 동기가 아니라는 것인가 그럼 동기란 무엇인가</description>
+    <pubDate>Wed, 28 Sep 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>asynchronous</category><category>vanilla js</category>
+  </item>
+
+  <item>
+    <guid>https://chanwoong1.github.io/blog/javascript/ js_callback</guid>
+    <title>자바스크립트 콜백함수</title>
+    <link>https://chanwoong1.github.io/blog/javascript/ js_callback</link>
+    <description>콜백이란 무엇인가</description>
+    <pubDate>Sun, 25 Sep 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>javascript</category><category>callback</category><category>vanilla js</category>
+  </item>
+
   <item>
     <guid>https://chanwoong1.github.io/blog/javascript/js_array_method</guid>
     <title>자바스크립트 배열의 메서드</title>
