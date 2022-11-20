@@ -18,21 +18,6 @@ layout: PostSimple
 
 이번 과제는 기능 구현 목록 문서를 최대한 자세하게 작성하는 것을 목표로 하였다. 기능 구현 목록만 작성하는 것이 아닌, 각 클래스 별 메서드의 의도와 테스트, 구현 과정 등을 상세히 적었다.
 
-```mermaid
-  flowchart LR;
-    A[App.play\n시작 문구 출력]--> | 입력 문구 출력 | B[다리 길이 입력];
-    B-->| 입력 문구 출력 |C[이동할 칸 입력];
-    B--> | 유효성 검사 | E1[에러 발생];
-    C-->D[이동한 칸까지 다리 건너기 결과 출력];
-    D--> | 이동 실패\n재시작 문구 출력 | E[재시작 혹은 종료 입력];
-    E--> | 재시작 선택 시 | C;
-    E--> | 유효성 검사 | E3[에러 발생];
-    E-->F[게임 성공 여부 및 결과 출력];
-    E1--> | 재입력 | B;
-    C--> | 유효성 검사 | E2[에러 발생];
-    E2--> | 재입력 | C;
-    E3--> | 재입력 | E;
-    C --> | 끝까지 건너는 데 성공 시 | F
-```
+[![](https://mermaid.ink/img/pako:eNp1U8tKw1AQ_ZXhrlVQdxUEbetKN7pMXFyaVAt9EVOkVKFqBbEVFRQfJLX47CKL9KGk4BflTv7BSZvUV3pXuTNzzpwzk1thqYKishgDSGcLu6ltrumwur4g54HOkrRULM4Us7wsy3msG9i8BGE57rsF-GGI1svm9PQi7AE2j-nyO0XhZUnUn8WrBa7joNkPyjYD8mXCToLGJaoX53fedQtw4EQg_a5Gy7tvY60DbreKhxaFkrMS3lyIBwuEbeCRGSLihEiMOQ2f0x008K0KocJOX9ROXMcmLtvtfYb-Anwi6DgkAKw_e422P5KmFTUVX4j0nfNuB2hWAR-PxVPjj5VkOMCwGGst78ikFgaF43-qIgzPRxv2ESuS221gs0acHbf3DnhjiQ9ybJ9Hm0zOfosZbYVW-GOAExTMTVAw959t7Gf-fy4ZdoJRThyYwYpGuxGnVyDO7LGZ4YBW2BTLqVqOZxT6hys-g8z0bTWnyixGn4qa5qWsLjM5v0-lvKQXNsr5FIvpWkmdYqWiwnU1keFbGs-xWJpndyiqKhm9oK2N3sXweex_AVSrg6o?type=png)](https://mermaid.live/edit#pako:eNp1U8tKw1AQ_ZXhrlVQdxUEbetKN7pMXFyaVAt9EVOkVKFqBbEVFRQfJLX47CKL9KGk4BflTv7BSZvUV3pXuTNzzpwzk1thqYKishgDSGcLu6ltrumwur4g54HOkrRULM4Us7wsy3msG9i8BGE57rsF-GGI1svm9PQi7AE2j-nyO0XhZUnUn8WrBa7joNkPyjYD8mXCToLGJaoX53fedQtw4EQg_a5Gy7tvY60DbreKhxaFkrMS3lyIBwuEbeCRGSLihEiMOQ2f0x008K0KocJOX9ROXMcmLtvtfYb-Anwi6DgkAKw_e422P5KmFTUVX4j0nfNuB2hWAR-PxVPjj5VkOMCwGGst78ikFgaF43-qIgzPRxv2ESuS221gs0acHbf3DnhjiQ9ybJ9Hm0zOfosZbYVW-GOAExTMTVAw959t7Gf-fy4ZdoJRThyYwYpGuxGnVyDO7LGZ4YBW2BTLqVqOZxT6hys-g8z0bTWnyixGn4qa5qWsLjM5v0-lvKQXNsr5FIvpWkmdYqWiwnU1keFbGs-xWJpndyiqKhm9oK2N3sXweex_AVSrg6o)
 
 과정은 이런식으로 작성해보았다.
