@@ -17,4 +17,5 @@ layout: PostSimple
 
 - [1주차](https://chanwoong1.github.io/blog/woowacourse/precourse_week1)
 - [2주차](https://chanwoong1.github.io/blog/woowacourse/precourse_week2)
-- [2주차](https://chanwoong1.github.io/blog/woowacourse/precourse_week3)
+- [3주차](https://chanwoong1.github.io/blog/woowacourse/precourse_week3)
+- [4주차](https://chanwoong1.github.io/blog/woowacourse/precourse_week4)
