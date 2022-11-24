@@ -13,7 +13,7 @@ layout: PostSimple
   - [Introduction](#introduction)
 - [Chapter 2](#chapter-2)
   - [Mandatory part](#mandatory-part)
-- [Chapter 3](#chapter-5)
+- [Chapter 3](#chapter-3)
   - [Bonus part](#bonus-part)
 - [느낀 점](#느낀-점)
 
@@ -111,7 +111,7 @@ mutex에 필요한 세 함수이다. 세 함수 모두 필요한 인자인 pthre
 
 철학자를 죽이지 않고 밥을 먹이는 방법은 철학자 쓰레드 별로 인덱스를 달아준 뒤, 짝수번 철학자 그룹과 홀수번 철학자 그룹을 나누어 순차적으로 밥을 먹이는 방법이 대표적이다. 이 방법이 가장 효과적인 이유는 원탁에 포크가 두 철학자 사이에 하나씩 놓여있기 때문이다. 즉, 내 왼쪽 철학자가 포크를 먼저 잡으면, 나는 왼쪽 포크를 잡기위해 왼쪽 철학자가 포크를 내려놓기만을 기다려야한다는 뜻이다. 따라서 짝수번 철학자들이 밥을 먹는 동안, 홀수번 철학자들은 잠을 자는 식으로 순차적으로 밥을 먹인다면 무한히 밥을 먹일 수 있게 되는 것이다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/philosophers/philosophers01.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/philosophers/philosophers01.png?raw=true)
 
 철학자들이 근엄하게 밥을 먹으려 하고 있다..
 
@@ -172,11 +172,11 @@ void	*ph_thread(void *argv)
 
 이 함수에서 짝수번째 철학자들을 먼저 대기시키고 홀수번째 철학자부터 포크를 들게 한다. 이를 통해 홀수번째 철학자들이 먼저 식사를 시작하고, 식사하는 시간동안 시간을 보낸 뒤, 포크를 내려놓으며 잠을 잔다. 홀수번째 철학자들이 잠에 들면 짝수번째 철학자들이 식사를 시작한다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/philosophers/philosophers_move01.gif?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/philosophers/philosophers_move01.gif?raw=true)
 철학자들이 야무지게 식사를 하는 모습..
 
 이 과정을 시각화 하면
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/philosophers/philosophers02.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/philosophers/philosophers02.png?raw=true)
 
 이런 식이 된다.
 
@@ -227,7 +227,7 @@ while (i < arg->philo_num)
 
 분명 지금까지 먹고 자고만 말했는데 코드를 보면 "is thinking"이라는 문구가 적혀있다. 이것은 너무 많은 철학자들이 밥을 먹을 경우 소수의 철학자들이 밥을 먹을 때와 동일한 작업을 수행하지만 물리적인 한계로 인해 포크를 잡고 내려놓는 시간들이 밀리게 된다. 그러면서 조금씩 식사시간이 늦어지게 되고, 끝내 식사를 마치지 못한 철학자가 수명을 다해 죽는 경우가 발생한다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/philosophers/philosophers03.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/philosophers/philosophers03.png?raw=true)
 
 위의 경우는 무리해서 300명에게 밥을 먹이려 했던 경우이다. 2번 철학자의 경우 거의 생각만 하고 있는것을 볼 수 있다. 이때문에 usleep을 통해 "적당히" 시간을 보내주는게 중요하다. 너무 조금씩 시간을 보내 반복문을 많이 돌릴 경우 바로 시간이 밀리게 되고, 큰 수로 시간을 보내게 하면 주어진 식사시간보다 더 많이 시간을 보낼 수도 있기 때문이다.
 
@@ -261,7 +261,7 @@ mandatory와 비슷하면서도 조금 다른게 프로세스와 쓰레드의 �
 
 동작은 다음과 같다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/philosophers/philosophers_move02.gif?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/philosophers/philosophers_move02.gif?raw=true)
 
 번갈아 가며 식사를 하는건 동일하지만, 포크를 잡는 방식이 약간 다르다. 양 옆에 포크가 있어 양쪽만 신경쓰면 되는 mandatory와 달리 누구나 원탁에서 포크를 가져갈 수 있기 때문에 무질서하게 포크를 집어가고 있다.
 

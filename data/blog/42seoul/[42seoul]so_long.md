@@ -169,7 +169,7 @@ static char *result[] = {
 
 이런 파일이
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/so_long/so_long01.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/so_long/so_long01.png?raw=true)
 
 이런식으로 창에 뜬다.
 
@@ -226,7 +226,7 @@ so_long의 프로그램이 받아오는 인자는 '.ber'의 확장자를 가지�
 
 맵 검증이 끝났다면 화면에 그림을 띄워야한다. 그림은 한줄로 저장한 맵을 차례대로 읽어 부분부분 창에 띄워주면 된다. 이 때, 가지고 온 이미지들이 같은 규격이면 더욱 표현하기 좋다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/so_long/so_long02.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/so_long/so_long02.png?raw=true)
 
 mlx라이브러리를 적절히 사용해줬다면 이런식으로 화면을 띄울 수 있다.
 
@@ -234,11 +234,11 @@ mlx라이브러리를 적절히 사용해줬다면 이런식으로 화면을 띄
 
 이제 키보드를 통해 이벤트를 받아 함수를 실행시켜야한다. w를 입력했을 때 w가 입력된 것을 감지하여 캐릭터를 한 칸 위로 올려야 한다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/so_long/so_long03.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/so_long/so_long03.png?raw=true)
 
 한칸을 위로 올리기 위해서는 캐릭터의 윗 칸이 벽이 아닌지, 수집품을 다 모으지 않은 상태의 출구가 아닌지를 확인하고, 그 외의 상황일 경우에만 움직일 수 있다. 움직일 때 한 줄로 받아온 맵의 문자열을 바꿔가면서 움직이므로 수집품을 획득할 때는 'C'를 'P'로 바꿔주기만 하면 된다. 그리고 수집품의 수량을 확인해놓은 다음, 모두 획득했다면 출구로 갔을 때 종료할 수 있도록 해준다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/so_long/so_long04.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/so_long/so_long04.png?raw=true)
 
 터미널에 걸음 수를 출력해주면 mandatory 완료.
 
@@ -293,7 +293,7 @@ typedef struct s_obj
 
 위의 방식이면 d 방향으로 8번 눌렀을 때, 64픽셀을 이동하여 멥의 배열을 변경해주는 식으로 구현했다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/so_long/so_long_move01.gif?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/so_long/so_long_move01.gif?raw=true)
 
 #### enemy
 

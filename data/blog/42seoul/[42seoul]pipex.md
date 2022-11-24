@@ -36,7 +36,7 @@ layout: PostSimple
 
 대화식, 시분할처리 시스템용 운영체제이다. 오늘날의 유닉스 시스템은 다양한 운영체제를 만드는 데 활용되고 있다. 현재는 많이 줄어들었지만, 대표적으로 macOS가 남아있다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/pipex/unix01.svg?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/pipex/unix01.svg?raw=true)
 
 유닉스는 C언어로 작성되어, 다양한 플랫폼에 이식이 가능하고, 오픈 소스로 누구나 사용할 수 있다.
 
@@ -129,7 +129,7 @@ int pipe(int fd[2]);
 
 pipex 과제이기 때문에 pipe 함수는 굉장히 중요하다. 이 파이프를 통해 우리가 표준 입력이 아닌 다른 fd로 입력을 받은 것을 처리하여 다시 표준 출력이 아닌 또 다른 fd로 출력해줄 수 있게 된다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/pipex/pipe01.jpg?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/pipex/pipe01.jpg?raw=true)
 
 그럼 이런식의 파이프 활용을 할 수 있게 된다. (글씨 주의...)
 
@@ -227,7 +227,7 @@ int main(int argc, char **argv, char **envp)
 }
 ```
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/pipex/pipex01.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/pipex/pipex01.png?raw=true)
 
 이런식으로 환경변수를 확인할 수 있는 간단한 프로그램을 실행해보면 개인별로 조금씩은 다르지만, "PATH="라고 시작하는 변수가 하나 보일 것이다. 우리는 이 변수를 찾아, ':'로 구분되어있는 것을 분리해주어 저장해야한다.
 
