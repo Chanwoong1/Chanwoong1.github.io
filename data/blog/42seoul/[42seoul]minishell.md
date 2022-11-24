@@ -29,7 +29,7 @@ philosopher를 저번달에 끝낸 후, 벌써 한달 반이 지났다. 그 시�
 
 미니쉘 과제는 흔히 사용하는 터미널 쉘을 만드는 것이다. 자세히 말하자면.. [bash](https://www.gnu.org/software/bash/)라는 쉘을 만들게 된다. bash shell은 리눅스나 맥 OS에서 쓰이는 만큼 여러 방면에서 광범위하게 사용되고 있다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minishll/minishell_chapter1_01.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minishell/minishell_chapter1_01.png?raw=true)
 
 bash라는 명령어를 통해 bash shell을 실행해보면 저런식으로 실행이 된다. 이것과 같은 기능을 하도록 만들어보면 된다.
 
