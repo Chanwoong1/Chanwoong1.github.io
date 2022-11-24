@@ -29,6 +29,10 @@ philosopher를 저번달에 끝낸 후, 벌써 한달 반이 지났다. 그 시�
 
 미니쉘 과제는 흔히 사용하는 터미널 쉘을 만드는 것이다. 자세히 말하자면.. [bash](https://www.gnu.org/software/bash/)라는 쉘을 만들게 된다. bash shell은 리눅스나 맥 OS에서 쓰이는 만큼 여러 방면에서 광범위하게 사용되고 있다.
 
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minishll/minishell_chapter1_01.png?raw=true)
+
+bash라는 명령어를 통해 bash shell을 실행해보면 저런식으로 실행이 된다. 이것과 같은 기능을 하도록 만들어보면 된다.
+
 지난 2서클의 과제였던 [pipex](https://chanwoong1.github.io/blog/42seoul/[42seoul]pipex)의 업그레이드의 업그레이드 판이라고 할 수 있는데, pipex에서 진행했던 터미널을 통해 명령을 받아 bash의 명령을 실행하는 것이 당연하게도 미니쉘에서도 가능해야하기 때문이다.
 
 흔히 미니쉘을 하면 파싱과 구현 부분으로 역할을 나누어서 과제를 수행한다고 들었다. 그런데 나와 팀원은 모두 pipex과제를 했기 때문에 signal 쪽으로는 아직 잘 몰라서 전반적으로 다 배워볼 겸 모든 부분을 같이 해보기로 했다.
