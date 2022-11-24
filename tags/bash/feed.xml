@@ -7,9 +7,19 @@
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
-      <lastBuildDate>Sat, 10 Sep 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 24 Nov 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://chanwoong1.github.io/tags/bash/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]minishell</guid>
+    <title>[42seoul] minishell</title>
+    <link>https://chanwoong1.github.io/blog/42seoul/[42seoul]minishell</link>
+    <description>미니쉘은 초콜릿이지</description>
+    <pubDate>Thu, 24 Nov 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>3rd_circle</category><category>C</category><category>42seoul</category><category>minishell</category><category>bash</category>
+  </item>
+
   <item>
     <guid>https://chanwoong1.github.io/blog/42seoul/[42seoul]pipex</guid>
     <title>[42seoul] pipex</title>
