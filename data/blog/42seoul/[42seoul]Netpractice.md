@@ -229,3 +229,94 @@ C1과 D1도 같은 방식으로 연결한다.
 
 </div>
 </details>
+
+### Level 2
+
+2번도 기기와 기기간의 연결이다. 하지만 이번에는 서브넷 마스크를 맞춰주어야 한다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_01.png?raw=true)
+
+<details>
+<summary>2번 해설</summary>
+<div markdown="1">
+
+A1의 IP 주소는 B1과 같은 네트워크로 맞춰주고, B1의 서브넷 마스크는 A1의 서브넷 마스크와 동일하게 설정해준다.
+
+C1과 D1의 주소는 /30인 서브넷 마스크 내에서 같은 네트워크 주소값을 찾아 넣어주어야 한다.
+이 때, /30이면 서브넷 당 IP 주소값이 4개정도로 굉장히 적다. (호스트 ID가 두자리로 [00, 01, 10, 11]이 하나의 네트워크이다.) 그렇기 때문에, C1과 D1의 주솟값을 1차이로 넣어주어야한다. 왜냐면 네개의 주소 중 맨 처음은 네트워크이고, 맨 마지막은 브로드캐스트 주소이기 때문에 사용할 수 없기 때문이다. 따라서 계산하기 쉬운 [0, 1, 2, 3]중 [1, 2]를 주소로 넣어주면 된다. 이때, 1 ~ 3옥텟은 C클래스의 서브넷이기 때문에, C클래스 주소값 중 사설IP를 제외한 값을 넣어주면 된다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_02.png?raw=true)
+
+</div>
+</details>
+
+### Level 3
+
+3번은 스위치를 통한 기기의 연결이다. 스위치 내의 기기는 같은 네트워크로 연결되어야 한다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level3_00.png?raw=true)
+
+<details>
+<summary>3번 해설</summary>
+<div markdown="1">
+
+client A ~ C는 A의 고정된 IP를 기준으로 주변 값들을 넣어준다. 서브넷 마스크는 C의 고정된 값을 사용한다.
+
+서브넷이 /25이기 때문에, [0 ~ 127, 128 ~ 255]범위인 두 네트워크가 만들어지게 되고, A의 고정된 값이 125이므로 B, C의 주소를 0 ~ 127 범위 내에서 입력해주면 된다. 이것도 마찬가지로 [0, 125, 127]은 입력 불가.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level3_01.png?raw=true)
+
+</div>
+</details>
+
+### Level 4
+
+4번은 스위치 연결과 라우터 연결이 함께 있다. 이 문제는 라우터의 IP주소를 3개 모두 다르게 설정해주어야 한다. 그 뒤, 스위치와 기기들을 라우터의 R1 네트워크에 맞춰주면 된다. A1의 주소를 먼저 참고하자.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level4_00.png?raw=true)
+
+<details>
+<summary>4번 해설</summary>
+<div markdown="1">
+
+A1의 주소를 보면, R2의 주소와 비슷해보인다. 하지만 라우터의 IP주소는 모두 달라야만 하므로, 서브넷을 통해 분리를 시켜주어야 한다. R2의 주소가 /25인 서브넷 마스크에 102.216.113.1 이므로, 0 ~ 127 까지의 범위는 사용할 수 없다.
+따라서 128 ~ 255범위에서 기기와 라우터의 주소값을 입력해주면 된다. 서브넷 마스크는 네트워크 주소가 다 분리되어 있으므로 기기들의 네트워크를 하나로 포함할만한 값만 넣어주면 된다. (극단적인 /29 ~ /31 류의 값은 진법계산하기 힘들 수 있으므로 되도록이면 피하는것이 좋을것이다.)
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level4_01.png?raw=true)
+
+</div>
+</details>
+
+### Level 5
+
+5번은 라우터를 통해 다른 네트워크들 끼리 연결을 시켜주는 문제이다. R1과 A를 연결시켜주고, R2와 B를 연결시켜주면 된다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level5_00.png?raw=true)
+
+<details>
+<summary>5번 해설</summary>
+<div markdown="1">
+
+먼저, 지금까지 해왔던 것 처럼 각 라우터와 기기를 같은 네트워크로 만들어준다. 고정된 값들을 이용하면 된다. 기기 옆에 있는 route는 라우터의 IP 주소를 적어주면 된다. 왼쪽 칸이 목적지, 오른쪽 칸이 경로이므로 오른쪽 칸에 적어준다. 왼쪽 칸은 목적지로 B의 주소를 적어주면 되지만, 목적지를 알 수 없다는 의미의 default나 0.0.0.0/0을 적어주어도 정답이 된다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level5_01.png?raw=true)
+
+</div>
+</details>
+
+### Level 6
+
+6번부터는 평가 때 무작위로 나오는 문제들이다. 점점 어려워지기 시작한다. 기기는 스위치와 라우터를 통해 인터넷으로 연결되어야 한다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level6_00.png?raw=true)
+
+<details>
+<summary>6번 해설</summary>
+<div markdown="1">
+
+먼저 기기와 라우터를 연결시켜주어야 한다. 고정된 IP주소와 서브넷 마스크를 사용하여 연결할 수 있다. 인터넷에서는 오른쪽 경로를 통해 왼쪽 목적지로 연결이 되어야 하므로, 오른쪽에는 라우터 주소, 왼쪽에는 기기 주소의 네트워크 주소를 입력해준다. 서브넷마스크를 통해 /25인 서브넷이 되었으므로 4옥텟의 네트워크 주소는 0이 아닌 128이 된다. 나머지 박스들의 경로는 default 혹은 인터넷의 주소값을 적어주면 된다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level6_01.png?raw=true)
+
+</div>
+</details>
