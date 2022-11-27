@@ -341,3 +341,44 @@ R2의 주소가 /25인 서브넷 마스크에 102.216.113.1 이므로, 0 ~ 127 �
 
 </div>
 </details>
+
+### Level 7
+
+점점 난이도가 높아지고 있다. 이번에는 라우터와 라우터를 연결시켜야 한다. 여기서 중요한 점은 라우터와 기기 간의 네트워크가 같아야하고, 라우터간의 네트워크도 같아야한다. 각각의 연결된 네트워크의 주소는 모두 달라야한다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level7_00.png?raw=true)
+
+<details>
+<summary>7번 해설</summary>
+<div markdown="1">
+
+- 1번 방법 (서브넷 마스크 다른 값 사용)
+
+먼저, 고정된 값을 활용해 라우터간의 연결과 기기와 라우터의 연결을 해줄 수 있다.
+
+그런데 자세히 보면 라우터1의 네트워크 주소가 비슷한 것을 알 수 있다. 이것은 서브넷을 통해 네트워크를 분리시키라는 의미이다.
+
+R1 - A1 간의 연결은 고정된 IP값의 4옥텟이 1이고, R1 - R2간의 연결은 고정된 IP의 4옥텟이 254이므로 두개의 네트워크로만 분리해줘도 될 것이다.
+
+C클래스의 네트워크에서 두개의 네트워크로 분리시켜주려면 /25의 서브넷 마스크 값이 있으면 되므로 넣어준다.
+
+그리고 고정 IP의 값에 맞게 주변의 값을 적절히 넣어주면 되고, 각각의 파란 박스는 경로만 연결시켜주면 된다.
+
+R2 - C1간의 연결은 그냥 임의의 IP값을 네트워크에 맞도록 넣어주기만 하면 된다.
+
+본인은 그냥 편하게 서브넷 마스크 /24에 1옥텟의 값만 1 추가해서 다른 네트워크를 만들어주었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level7_01.png?raw=true)
+
+- 2번 방법 (서브넷 마스크 같은 값으로 통일하고 싶을 떄)
+
+1의 방법과는 다르게 서브넷 마스크를 통일하고 싶다면 /26의 값을 서브넷에 넣어보도록 하자. 그러면 네트워크는 4개로 나뉠 것이다.
+
+0 ~ 255까지 256개의 주소에 4개의 네트워크를 할당하게 되면 각각 64개의 주소를 가지는 네트워크를 만들 수 있다.
+
+따라서 고정값이 1과 254이므로 65 ~ 191 사이의 값들로 R2 - C1의 연결 네트워크를 구성하면 될 것이다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level7_02.png?raw=true)
+
+</div>
+</details>
