@@ -17,6 +17,16 @@ layout: PostSimple
   - [서브넷](#서브넷)
   - [서브넷 마스크](#서브넷-마스크)
 - [Chapter 3](#chapter-3)
+  - [Level 1](#level-1)
+  - [Level 2](#level-2)
+  - [Level 3](#level-3)
+  - [Level 4](#level-4)
+  - [Level 5](#level-5)
+  - [Level 6](#level-6)
+  - [Level 7](#level-7)
+  - [Level 8](#level-8)
+  - [Level 9](#level-9)
+  - [Level 10](#level-10)
 - [느낀 점](#느낀-점)
 
 ## Chapter 1
@@ -441,3 +451,159 @@ R13의 주소를 알았다면, R13 - R21은 연결되어 있으므로 R21의 주
 
 </div>
 </details>
+
+### Level 9
+
+드디어 문제 중 가장 어렵다고 하는 9번 문제이다. 확대하면 한 화면에 담기지도 않는다.. 그래도 일단 문제를 풀어보자.
+
+이번에도 인터넷 연결을 라우터를 통해 해주어야 한다. 거기에 추가된 점은 한쪽은 스위치로 라우터와 연결되어있고, 다른 한쪽은 라우터랑 연결되어있다.
+
+지금까지 했던대로 문제를 풀어보자. 괜히 모아놔서 어려워 보이는것일 뿐이다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level9_00.png?raw=true)
+
+<details>
+<summary>9번 해설</summary>
+<div markdown="1">
+
+이번에도 고정값을 먼저 활용해준다.
+
+  <details>
+  <summary>스위치 연결</summary>
+  <div markdown="1">
+
+스위치 연결부터 한번 해보도록 하자
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level9_01.png?raw=true)
+
+스위치는 비교적 연결하기 쉽다. 고정된 서브넷 마스크를 토대로 서브넷 마스크를 맞춰주고, 서브넷 마스크가 C클래스의 서브넷을 뜻하므로 그에 맞는 주솟값을 적절히 넣어주면 된다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level9_02.png?raw=true)
+
+사설 IP값을 넣지 않도록 주의하자
+
+  </div>
+  </details>
+
+  <details>
+  <summary>기기 연결</summary>
+  <div markdown="1">
+
+그 다음 고정값을 활용할 수 있는곳을 찾아보면, Client D와 라우터의 연결이 있다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level9_03.png?raw=true)
+
+이 부분은 IP주소와 서브넷 마스크가 모두 고정값이 있기 때문에 매우 쉽다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level9_04.png?raw=true)
+
+다음은 남은 라우터와 기기를 연결해보자. 이번에도 고정값을 우선 활용한다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level9_05.png?raw=true)
+
+고정된 서브넷 마스크를 활용해 서브넷 마스크를 맞춰주었다. /30의 서브넷 마스크인데 기본적으로 라우터에 적혀있는 IP가 적절해보여서 따로 수정해주지는 않았다.
+
+기기와 라우터간의 연결은 사설IP가 입력되어 있으므로, 다른 IP를 서브넷 마스크에 맞게 입력해주면 된다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level9_06.png?raw=true)
+
+  </div>
+  </details>
+
+  <details>
+  <summary>인터넷 연결</summary>
+  <div markdown="1">
+
+여기까지 했다면, 각각의 네트워크 연결은 다 했다고 볼 수 있다.
+
+이제 라우터와 인터넷의 경로를 설정해주기만 하면된다.
+
+먼저 R1의 경로 설정이다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level9_07.png?raw=true)
+
+이렇게 해주면 되는데, C와 D가 인터넷과 연결이 되어야 하기 때문에 라우터 2의 주소인 60.40.14.253의 경로를 통해 각각의 네트워크로 향한다는 것을 입력해야한다.
+
+목적지는 네트워크 주소 + 서브넷마스크를 적어주면 된다.
+
+이제 남은 인터넷 경로를 입력해주자.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level9_08.png?raw=true)
+
+이렇게 스위치쪽의 네트워크 주소와 C의 네트워크 주소를 입력해주면 된다.
+
+이 이유는 문제의 요구사항을 보면 알 수 있다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level9_09.png?raw=true)
+
+인터넷의 연결이 필요한 부분이 'meson'과 'cation'으로 A와 C를 의미한다. 따라서 이 두 기기의 네트워크 주소를 입력해주면 되는 것이다.
+
+  </div>
+  </details>
+
+  <details>
+  <summary>한눈에 보기</summary>
+  <div markdown="1">
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level9_10.png?raw=true)
+
+  </div>
+  </details>
+
+</div>
+</details>
+
+### Level 10
+
+드디어 마지막 문제이다. 9번 문제보다 고정값이 많아 비교적 쉽다.
+
+고정값을 참고해 먼저 채워줄 수 있는 부분들을 채워주면서 나머지 값들을 채워보자.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level10_00.png?raw=true)
+
+<details>
+<summary>10번 해설</summary>
+<div markdown="1">
+
+고정값을 활용해 채워줄 수 있는 부분들을 채워주었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level10_01.png?raw=true)
+
+두번째는 인터넷 연결을 해줄 수 있다. 현재 고정값을 통해 IP주소를 입력했을 때, R1쪽의 스위치와 R2를 통해 연결된 H4까지 3옥텟까지의 주솟값이 같은것을 알 수 있다.
+
+또한, 인터넷 연결 주소를 하나밖에 입력하지 못하므로, 스위치와 기기들의 주소를 모두 통합할 수 있는 주소를 적어주면 된다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level10_02.png?raw=true)
+
+이제 남은 것은 H3의 주소를 적어주는 것이다. 힌트는 앞에서 다 얻었다. 인터넷이 131.194.54.0/24의 목적지를 가진다는 것이다. 그리고, 스위치 쪽의 기기들과 H4의 기기의 네트워크 주소에 겹치지 않아야 한다.
+
+우선, 스위치쪽의 서브넷 마스크가 /25에 IP가 0 ~ 127 범위이므로 131.194.54.0 ~ 131.194.54.127의 범위는 적어줄 수 없다.
+
+그리고 H4를 보니 서브넷 마스크가 /26에 IP가 128 ~ 191 범위이므로 131.194.54.128 ~ 131.194.54.191도 적어줄 수 없다.
+
+마지막으로 라우터 간의 연결은 서브넷마스크가 /30에 IP가 252 ~ 255 범위이므로 131.194.54.252 ~ 131.194.54.255도 적어줄 수 없다.
+
+그러면 131.194.54의 네트워크 주소 중, 사용 가능한 주소는 다음 범위와 같다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level10_03.png?raw=true)
+
+이 범위를 적어주면 되는데, 본인은 평가 중간에 그때그때 진법 계산을 해주기 불편해서 라우터의 옆 네트워크를 사용해주었다.
+
+여기까지 해주면 완성이다. 중간의 라우터 목적지는 고정값인 131.194.54.128/26에 H3과 H4의 네트워크 주소가 포함되므로 default나 0.0.0.0/0을 적어주어도 된다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/netpractice/netpractice_chapter3_level10_04.png?raw=true)
+
+완성 !
+
+</div>
+</details>
+
+# 느낀 점
+
+이번 과제는 초반 개념잡기가 굉장히 까다로웠다. 사실 평가를 받을 때 까지도 어떤 부분은 왜 이런식으로 입력해야하는지 이해하지 못해서 외워서 값을 적었던 부분도 있었다.
+
+과제를 마치고 난 뒤 블로그에 글을 쓰면서 스스로 더 공부해볼 수 있었고, 원리를 알고나니 생각보다 재미있는 과제였다는것을 뒤늦게 깨달아버렸다.
+
+지금까지 완료했던 과제들을 블로그에 다시 한번 정리하면서 생각보다 시간이 좀 걸리고, 귀찮을 때도 있었는데, 이번 과제를 통해 복습과 정리가 굉장한 도움이 된다는 것을 알게 되어 앞으로도 과제 정리를 소홀히 하지 않아야겠다는 생각이 들었다.
+
+결국 돌아보니 과제를 진짜 2일만에 끝낼 수 있었다.
