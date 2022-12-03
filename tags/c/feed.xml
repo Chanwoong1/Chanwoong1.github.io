@@ -7,9 +7,19 @@
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
-      <lastBuildDate>Sat, 26 Nov 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 01 Dec 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://chanwoong1.github.io/tags/c/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://chanwoong1.github.io/blog/42seoul/cpp_module/[42seoul]cpp01</guid>
+    <title>[42seoul] CPP Module 01</title>
+    <link>https://chanwoong1.github.io/blog/42seoul/cpp_module/[42seoul]cpp01</link>
+    <description>클래스의 동적할당과 포인터와 레퍼런스에 대해 알아보자</description>
+    <pubDate>Thu, 01 Dec 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>4th_circle</category><category>C++</category><category>class</category><category>42seoul</category>
+  </item>
+
   <item>
     <guid>https://chanwoong1.github.io/blog/42seoul/cpp_module/[42seoul]cpp00</guid>
     <title>[42seoul] CPP Module 00</title>
