@@ -243,11 +243,233 @@ delete [] zHorde;
 
 ### Ex02
 
-이 문제는 자신이 꿈의 회사에 입사를 한 뒤 일어난 문제를 해결해야한다. 이 회사에서는 git을 사용하지 않고 USB를 사용해 코드를 공유한다고 한다.(이게 꿈의 회사..? 이건 꿈일거야..의 꿈일것 같다.)
+이번 문제는 포인터와 레퍼런스에 대해 알아보는 것이다.
 
-어쨌든 USB를 사용해 코드를 공유하다가 코드가 유실이 된 것이다... 그래서 과거의 기록과 남겨진 코드를 참고하여 유실된 코드를 복원해야하는것이 문제이다.
+main문 하나만 짜면 되는데, 굉장히 간단하다. 하지만 이것을 이해하는것이 쉽지 않을 것이다.
 
-하나하나 순차적으로 출력을 해보면 되는 것이기 때문에 한번 풀어보기를 바란다.
+```C++
+#include <string>
+#include <iostream>
+
+int main(void) {
+  std::string str = "HI THIS IS BRAIN";
+  std::string	*stringPTR = &str;
+	std::string	&stringREF = str;
+
+  std::cout << "Print memory address of string" << std::endl;
+  std::cout << "string memory address : " << &str << std::endl;
+  std::cout << "stringPTR memory address : " << stringPTR << std::endl;
+  std::cout << "stringREF memory address : " << &stringREF << std::endl;
+
+  std::cout << std::endl << "Print value of string" << std::endl;
+  std::cout << "string value : " << str << std::endl;
+  std::cout << "stringPTR value : " << *stringPTR << std::endl;
+  std::cout << "stringREF value : " << stringREF << std::endl;
+  return (0);
+}
+```
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/01/ex02_00.png?raw=true)
+
+이렇게 출력을 해줄 수 있으면 된다. 하지만 포인터와 레퍼런스에 대해 이해하고 넘어갈 수 있어야 한다.
+
+- 포인터
+
+포인터는 C에서도 익숙한 개념이다. 모든 변수는 메모리에 값을 저장하기 때문에 메모리 공간을 구별할 수 있도록 하는것이 메모리 주소값이다. 포인터 변수는 이런 메모리 주소값을 가진다.
+
+- 레퍼런스
+
+레퍼런스는 참조한다는 뜻으로, 다른 객체 또는 값의 별칭으로 사용되는 타입이다. 위의 결과를 보면 string의 출력 결과와 stringREF의 출력 결과가 같은 것을 확인할 수 있다.
+
+레퍼런스는 특별하게 선언과 동시에 초기화를 해주어야 한다. 포인터는 null값을 저장하는 null 포인터라는 개념이 있지만, 레퍼런스는 null을 참조할 수 없다. 따라서 무조건 초기화를 해주어야하고, 특히 l-value로 초기화를 해주어야 한다.
+
+r-value는 연산자의 오른쪽에 있다고 해서 r-value이다.
+
+```C++
+int& ref = 5; // r-value는 초기화할 수 없다.
+
+int x = 5;
+int& xRef = x;  // 이건 가능하다
+```
+
+둘의 차이점을 아는것이 중요하다. 상수를 바로 레퍼런스로 참조를 시킬수는 없다. 5라는 것이 어떠한 변수에 의해 남아있지 않기 때문이다.
+
+아래의 x = 5를 통해 x라는 변수에 5를 담아 레퍼런스로 만들어주어야 한다. x는 레퍼런스로 초기화시킨 이후에도 사라지지 않기 때문이다.
+
+여기서 의문이 들 것인데, 레퍼런스를 사용하는 이유가 무엇인지 궁금할 것이다. 원본 값이 있는데, 굳이 참조를 한 레퍼런스 값을 따로 사용한다는 것이 의미 없는 동작이라고 생각할 수도 있다.
+
+하지만 레퍼런스는 함수의 매개변수로 가장 많이 사용된다. 그 이유는 레퍼런스가 단순히 원본을 참조하는 것이기 때문에, 함수 내부에서 복사를 실행하지 않는다. 따라서 복사하는데 많은 비용이 소모되는 변수일 경우, 레퍼런스를 사용하는것으로 성능이 향상될 수 있다.
+
+또한, 포인터를 통해 함수에 변수를 넘겨주는 경우, 함수 내부에서 포인터를 역참조해서 값을 변경할 수 있다. 레퍼런스도 원본의 별칭으로 사용되어, 함수 내부에서 값을 변경할 수 있다.
+
+이 외에도 포인터와 레퍼런스를 구별해서 쓰는 이유는 여러가지 있으므로 더 고민하고 사용해보는 시간을 가지면 좋을 것이다.
+
+### Ex03
+
+#### 문제
+
+Weapon 클래스를 선언한다. 이 클래스는
+
+- private인 type을 가지며, string이어야 한다.
+
+- getType() 멤버 함수는 type의 const reference를 반환한다.
+
+- setType() 멤버 함수는 매개변수로 전달 된 새로운 것으로 type을 설정한다.
+
+이제, HumanA, HumanB라는 두개의 클래스를 만든다. 이들은 둘 다 Weapon과 이름을 가지고 있디. 이들은 attack이라는 멤버함수를 가지며, 이 함수는 다음과 같이 보여준다.
+
+```
+<name> attacks with their <weapon type>
+```
+
+HumanA와 HumanB는 대부분 같지만 두가지의 작은 차이점이 있다.
+
+- HumanA는 Weapon을 생성자로부터 가져야하지만, HumanB는 그렇지 않다.
+- HumanB는 Weapon을 가지고 있지 않을 수도 있지만, HumanA는 항상 무기를 장착한다.
+
+만약 올바르게 선언했다면, 아래 코드를 실행했을 때 처음 attack으로는 'crude spiked club'이 출력되고, 두번째 attack은 'some other type of club'이 출력될 것이다.
+
+```C++
+int main() {
+  {
+    Weapon club = Weapon("crude spiked club");
+    HumanA bob("Bob", club);
+    bob.attack();
+    club.setType("some other type of club");
+    bob.attack();
+  }
+  {
+    Weapon club = Weapon("crude spiked club");
+    HumanB jim("Jim");
+    jim.setWeapon(club);
+    jim.attack();
+    club.setType("some other type of club");
+    jim.attack();
+  }
+  return 0;
+}
+```
+
+메모리 누수를 확인하는것을 잊지말자.
+
+- 이 케이스에서 너가 생각하기에 Weapon을 포인터와 레퍼런스 중 어떤것을 사용하는것이 더 좋은 방법인지 생각해보자. 이 문제를 시작하기전에 이것에 대해 먼저 생각해보자.
+
+#### 구현
+
+먼저, 기본적인 Weapon, HumanA, HumanB 클래스는 주어진 main문을 참고해서 만들어줄 수 있다.
+
+```C++
+// Weapon class
+#include <string>
+
+class Weapon {
+  private:
+    std::string _type;
+
+  public:
+    Weapon( const std::string &type );
+    ~Weapon();
+    void setType( const std::string &type );
+    const std::string &getType( void ) const;
+};
+
+// HumanA class
+#include "Weapon.hpp"
+
+class HumanA {
+  private:
+    std::string _name;
+    Weapon &_type;
+
+  public:
+    HumanA( const std::string name, Weapon *type );
+    ~HumanA();
+    void attack( void ) const;
+};
+
+// HumanB class
+#include "Weapon.hpp"
+
+class HumanB {
+  private:
+    std::string _name;
+    Weapon *_type;
+
+  public:
+    HumanB( const std::string &name );
+    ~HumanB();
+    void attack( void ) const;
+    void setWeapon( Weapon *type );
+};
+```
+
+이런 식으로 클래스를 만들어주었다. 클래스의 구조만 보아도 쉽게 구현할 수 있을 것이다. 여기서 HumanA와 HumanB의 가장 큰 차이점은 type 변수가 레퍼런스와 포인터로 나뉜다는 점이다. 이 점은 각 클래스의 특징때문에 나타난다.
+
+HumanA는 생성자를 통해 Weapon을 받아야한다. 하지만 HumanB는 그렇지 않다. 이 뜻은 HumanA는 클래스가 선언됨가 동시에 Weapon이 초기화 되지만, HumanB는 그렇지 않다는 것이다.
+
+HumanB처럼 생성자에 Weapon을 인자로 받지 않을 때 Weapon이라는 멤버 변수가 레퍼런스라면, 해당 멤버 변수를 정의하는 것이 불가능하여 컴파일 조차 되지 않는다. 따라서 HumanB 클래스의 Weapon은 포인터가 적절하고, 자연스럽게 HumanA 클래스는 포인터 혹은 참조자 중 어느 것을 사용해도 되므로 참조자가 더 적절한 것을 알 수 있다.
+
+### Ex04
+
+#### 문제
+
+하나의 파일이름과 두개의 문자열인 s1과 s2 총 3개의 파라미터를 가지는 프로그램을 만들어라.
+
+<파일이름> 을 통해 파일을 열고, 모든 s1을 s2로 대체하여 새로운 파일인 <파일이름>.replace를 만들어 복사해라.
+
+C언어에서 사용하던 파일 함수들을 사용하는것은 금지이고, 사용한다면 치팅으로 간주될 것이다. 모든 멤버 함수들은 std::string클래스에서 허용되는 것을 사용해라. 단, replace함수는 제외하고. 함수들을 현명하게 사용하자!
+
+물론 예상치못한 입력값이나 에러들은 조정해야한다. 너가 직접 프로그램 동작을 가능하게 하는 테스트를 만들어 제출해야한다.
+
+#### 구현
+
+C언어에서는 파일을 열고 읽고 쓰기 위해 파일 디스크립터(fd) 혹은 FILE이라는 구조체 들을 사용했다. 하지만 이 과제에서는 C언어에서의 함수 사용을 금지하고 있으므로, string 라이브러리를 통해 과제를 해결해야한다.
+
+이 전에 스트림이라는 것에 대해 알고있으면 좋다. 우리가 흔히 터미널에 무언가를 출력할 경우, 표준 출력을 사용하고, 입력할 때는 표준 입력을 사용했다. 표준 입출력을 사용하기위해 별다른 코드를 입력하지 않아도 되는데, 그 이유는 컴파일러가 자동으로 표준입출력을 사용하도록 설정하기 때문이다.
+
+스트림은 입출력을 통하는 데이터를 총칭하는 용어이다. C++에서는 파일 스트림 관련 기능을 클레스로 제공하고 있고, string 라이브러리를 통해 사용 가능하다.
+
+```C++
+#include <fstream>
+#include <iostream>
+#include <string>
+
+std::ifstream _ifs;
+std::ofstream _ofs;
+```
+
+이런식으로 스트림을 설정해줄 수 있다. 각각 if와 of는 입력과 출력으로 다른 스트림을 열어준다는 의미이고, 입출력을 동시에 하고 싶다면 fstream을 사용해주면 된다.
+
+너무 투머치일수도 있겠지만.. 한번 테스트를 통해 코딩을 해보고싶어서 (TDD라고 하고싶지만 너무 초라하다..) 몇가지 작성해보았다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/01/ex04_00.png?raw=true)
+
+이런식으로 몇가지 예외사항에 대한 처리를 테스트해봤는데, 막상 해보니 시간도 좀 걸리고 테스터를 만들만한 문제들이 아닌것 같아 그만두었다.
+
+내가 했던 예외처리는 다음과 같다.
+
+- 파일이 존재하지 않을 경우
+- 파일은 존재하지만 권한이 없는 경우
+- s1이 공백인 경우
+
+s1만 처리를 한 이유는 s2가 공백일 경우 s1을 찾아 삭제를 해주는 remove의 기능으로 사용할 수 있다고 생각했는데, s1이 공백일 경우 함수의 기능이 제대로 동작하지 않을것 같았다.
+
+```C++
+while (1) {
+  this->pos = this->_readLine.find(this->_s1, this->pos);
+  if (this->pos == std::string::npos)
+    break;
+  this->_readLine.erase(this->pos, this->_s1.length());
+  this->_readLine.insert(this->pos, this->_s2);
+  this->pos += this->_s2.length();
+}
+```
+
+replace는 위의 코드를 사용했다. 한 줄씩 ifs에서 읽어준 뒤, 그 줄마다 인덱스를 0부터 줄의 끝까지 증가시키면서 s1을 찾아주고, s1을 찾았다면 s1을 지워준 뒤, 그 자리에 s2를 넣고 s2의 길이만큼 pos를 증가시켜 다음부터 또 찾게 해주었다.
+
+### Ex05
+
+#### 문제
 
 ## 느낀 점
 
@@ -258,3 +480,7 @@ norminette 없이 자유롭게 코딩을 할 수 있다는 것은 그만큼 다�
 따라서 다 했다고 생각하고 평가를 받았는데 틀린부분이 평가에서 계속 발견되었다. 그리고 앞서 말했던 서브젝트를 꼼꼼히 읽어야한다는 부분도 그래서 나온 말이다.
 
 하지만 새로운 언어를 배울수 있다는 부분에서 굉장히 즐거웠고, 객체지향 프로그래밍에 대해 확실하게 알고갈 수 있는 기회가 온것 같아 좋다.
+
+```
+
+```
