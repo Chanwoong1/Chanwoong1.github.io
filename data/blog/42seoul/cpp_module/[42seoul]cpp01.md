@@ -11,7 +11,7 @@ layout: PostSimple
 
 cpp00에서 엄청난 고난을 겪은 후, cpp01을 시작하게 되었다. 이번 과제에서는 메모리 동적할당과 포인터, 레퍼런스에 대해 배운다고 한다.
 
-# Cpp Module 00
+# Cpp Module 01
 
 - [Chapter 1](#chapter-1)
   - [Introduction](#introduction)
@@ -21,6 +21,10 @@ cpp00에서 엄청난 고난을 겪은 후, cpp01을 시작하게 되었다. 이
   - [Ex00](#ex00)
   - [Ex01](#ex01)
   - [Ex02](#ex02)
+  - [Ex03](#ex03)
+  - [Ex04](#ex04)
+  - [Ex05](#ex05)
+  - [Ex06](#ex06)
 - [느낀 점](#느낀-점)
 
 ## Chapter 1
