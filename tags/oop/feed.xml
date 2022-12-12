@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>WOONGTECH</title>
+      <link>https://chanwoong1.github.io/blog</link>
+      <description>내 발자취 기록하기</description>
+      <language>ko</language>
+      <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
+      <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
+      <lastBuildDate>Mon, 12 Dec 2022 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://chanwoong1.github.io/tags/oop/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://chanwoong1.github.io/blog/42seoul/cpp_module/[42seoul]cpp02</guid>
+    <title>[42seoul] CPP Module 02</title>
+    <link>https://chanwoong1.github.io/blog/42seoul/cpp_module/[42seoul]cpp02</link>
+    <description>Ad-hoc polymorphism, operator overloading and Orthodox Canonical class form</description>
+    <pubDate>Mon, 12 Dec 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>4th_circle</category><category>C++</category><category>oop</category><category>class</category><category>42seoul</category>
+  </item>
+
+    </channel>
+  </rss>

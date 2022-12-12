@@ -7,9 +7,39 @@
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
-      <lastBuildDate>Thu, 01 Dec 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Tue, 13 Dec 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://chanwoong1.github.io/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://chanwoong1.github.io/blog/algorithm_study/binary_search</guid>
+    <title>이분탐색</title>
+    <link>https://chanwoong1.github.io/blog/algorithm_study/binary_search</link>
+    <description>알고리즘 스터디 3주차 - 이분탐색</description>
+    <pubDate>Tue, 13 Dec 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>algorithm</category><category>algorithm study</category><category>python</category><category>boj</category><category>binary search</category>
+  </item>
+
+  <item>
+    <guid>https://chanwoong1.github.io/blog/42seoul/cpp_module/[42seoul]cpp02</guid>
+    <title>[42seoul] CPP Module 02</title>
+    <link>https://chanwoong1.github.io/blog/42seoul/cpp_module/[42seoul]cpp02</link>
+    <description>Ad-hoc polymorphism, operator overloading and Orthodox Canonical class form</description>
+    <pubDate>Mon, 12 Dec 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>4th_circle</category><category>C++</category><category>oop</category><category>class</category><category>42seoul</category>
+  </item>
+
+  <item>
+    <guid>https://chanwoong1.github.io/blog/algorithm_study/study_start</guid>
+    <title>알고리즘 스터디 시작</title>
+    <link>https://chanwoong1.github.io/blog/algorithm_study/study_start</link>
+    <description>사실 시작한지 한달정도 됐어요..</description>
+    <pubDate>Mon, 12 Dec 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>algorithm</category><category>algorithm study</category><category>python</category><category>boj</category>
+  </item>
+
   <item>
     <guid>https://chanwoong1.github.io/blog/42seoul/cpp_module/[42seoul]cpp01</guid>
     <title>[42seoul] CPP Module 01</title>

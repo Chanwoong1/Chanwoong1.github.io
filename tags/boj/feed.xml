@@ -1,0 +1,34 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>WOONGTECH</title>
+      <link>https://chanwoong1.github.io/blog</link>
+      <description>내 발자취 기록하기</description>
+      <language>ko</language>
+      <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
+      <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
+      <lastBuildDate>Tue, 13 Dec 2022 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://chanwoong1.github.io/tags/boj/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://chanwoong1.github.io/blog/algorithm_study/binary_search</guid>
+    <title>이분탐색</title>
+    <link>https://chanwoong1.github.io/blog/algorithm_study/binary_search</link>
+    <description>알고리즘 스터디 3주차 - 이분탐색</description>
+    <pubDate>Tue, 13 Dec 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>algorithm</category><category>algorithm study</category><category>python</category><category>boj</category><category>binary search</category>
+  </item>
+
+  <item>
+    <guid>https://chanwoong1.github.io/blog/algorithm_study/study_start</guid>
+    <title>알고리즘 스터디 시작</title>
+    <link>https://chanwoong1.github.io/blog/algorithm_study/study_start</link>
+    <description>사실 시작한지 한달정도 됐어요..</description>
+    <pubDate>Mon, 12 Dec 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>algorithm</category><category>algorithm study</category><category>python</category><category>boj</category>
+  </item>
+
+    </channel>
+  </rss>
