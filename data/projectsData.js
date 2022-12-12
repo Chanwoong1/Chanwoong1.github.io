@@ -1,5 +1,11 @@
 const projectsData = [
   {
+    title: '알고리즘 스터디',
+    description: `코딩 테스트를 대비하자`,
+    imgSrc: '/static/images/blog_posts/algorithm_study/project_img.png',
+    href: '/tags/algorithm-study',
+  },
+  {
     title: '우테코 프리코스',
     description: `4주간의 내 발자취 기록하기`,
     imgSrc: '/static/images/blog_posts/woowacourse/woowacourse_project_img.png',
