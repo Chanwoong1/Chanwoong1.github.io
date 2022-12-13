@@ -7,9 +7,19 @@
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
-      <lastBuildDate>Mon, 12 Dec 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Tue, 13 Dec 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://chanwoong1.github.io/tags/class/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://chanwoong1.github.io/blog/42seoul/cpp_module/[42seoul]cpp03</guid>
+    <title>[42seoul] CPP Module 03</title>
+    <link>https://chanwoong1.github.io/blog/42seoul/cpp_module/[42seoul]cpp03</link>
+    <description>Inheritance</description>
+    <pubDate>Tue, 13 Dec 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>4th_circle</category><category>C++</category><category>inheritance</category><category>class</category><category>42seoul</category>
+  </item>
+
   <item>
     <guid>https://chanwoong1.github.io/blog/42seoul/cpp_module/[42seoul]cpp02</guid>
     <title>[42seoul] CPP Module 02</title>
