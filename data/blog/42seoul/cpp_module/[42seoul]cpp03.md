@@ -183,7 +183,29 @@ void guardGate();
 <summary>구현 펼치기</summary>
 <div markdown="1">
 
-먼저, ScavTrap이라는 것을 만들어주어야 한다. ScavTrap은 ClapTrap을 상속받은 클래스이므로 다음과 같이 작성해준다.
+먼저, ClapTrap을 상속해주기 위해 ClapTrap의 몇 가지를 수정해주어야 한다. 자식 클래스에서 ClapTrap의 변수에 대해 접근하는것을 허용하기 위해 'private'를 'protected'로 변경해준다.
+
+또, 생성자와 소멸자, 그리고 attack()함수가 ClapTrap과 다른 메세지를 출력해야하므로 재정의가 필요하다. 자식 클래스에서 부모 클래스의 멤버함수를 변경하기 위해서는 부모 클래스 내부에서 'virtual' 키워드를 사용하여 가상 함수를 만들어주어야 한다.
+
+가상 함수에는 몇 가지 규칙이 존재하는데,
+
+- 클래스의 public 제한자 섹션에서 선언해야 한다.
+- 가상 함수는 static일 수 없으며, friend 키워드도 사용할 수 없다.
+- 가상 함수는 부모 클래스의 포인터 또는 참조를 통해 접근해야 한다.
+- 가상 함수의 프로토타입은 부모 클래스와 자식 클래스에서 동일해야한다.
+- 클래스는 가상 소멸자를 가질 수 있지만, 가상 생성자는 가질 수 없다.
+
+가상 함수를 사용하지 않으면 함수가 컴파일 하는 동안 이미 부모 클래스의 함수를 호출하는 것으로 결정(정적 바인딩)하기 때문에 재정의된 함수를 실행할 수 없다.
+
+따라서, 가상 함수를 사용해서 런타임 동안 값이 결정(동적 바인딩)되는 특성으로 포인터가 가리키는 위치에 따라 자식 클래스의 함수를 호출할 수 있도록 구현 해야한다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/03/ex01_00.png?raw=true)
+
+문제에서 요구한 대로 생성자와 소멸자, attack 함수에 대해 ScavTrap에서 재정의를 해줬다. 또한, 새로 추가되는 void guardGate()에 대해서도 정의해주었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/03/ex01_01.png?raw=true)
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/03/ex01_02.png?raw=true)
 
 </div>
 </details>
@@ -192,20 +214,24 @@ void guardGate();
 
 #### 문제
 
-다음 연산자를 오버로드하려면 public 멤버 함수를 클래스에 추가해라.
+ClapTrap을 만드는 것은 아마 너의 신경을 건드리기 시작했을 것이다.
 
-- 6개의 비교 연산자: \>, \<, \>=, \<=, ==, !=
-- 4개의 산술 연산자: +, -, \*, /
-- 4개의 증감(전위 증가, 후위 증가, 전위 감소, 후위 감소) 연산자, 1 + ϵ > 1 과 같이 표현할 수 있는 가장 작은 ϵ에서 고정 소수점 값을 늘리거나 줄인다.
+이제부터, ClapTrap을 상속받은 FragTrap을 구현하자. ScavTrap과 굉장히 비슷하다. 그러나, 생성자와 소멸자의 메세지는 달라야한다. 생성자와 소멸자의 연계가 적절한지 너의 테스트로 보여주어야 한다. FragTrap이 생성되었을 때, ClapTrap을 구축해서 프로그램이 시작된다. 소멸자는 역순이다.
 
-다음 네가지 public 오버로드 멤버 함수들을 클래스에 추가해라.
+속성에 대해 동일하지만, 이번에는 값이 다르다.
 
-- 정적 멤버 함수 min은 고정 소수점 숫자에 대한 두 개의 참조를 매개변수로 취하고 가장 작은 참조를 반환해야 한다.
-- 정적 멤버 함수 min은 상수 고정 소수점 숫자에 대한 두 개의 참조를 매개변수로 취하고 가장 작은 참조를 반환해야 한다.
-- 정적 멤버 함수 max는 고정 소수점 숫자에 대한 두 개의 참조를 매개변수로 취하고 가장 큰 참조를 반환해야 한다.
-- 정적 멤버 함수 max은 상수 고정 소수점 숫자에 대한 두 개의 참조를 매개변수로 취하고 가장 큰 참조를 반환해야 한다.
+- Name, 생성자의 매개변수로 전달됨
+- Hit points(100), ClapTrap의 체력을 나타냄
+- Energy points(100)
+- Attack damage(30)
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/02/ex02_00.png?raw=true)
+FragTrap은 특별한 능력도 가지고 있다.
+
+void highFivesGuys(void);
+
+이 멤버 함수는 표준 출력 상에서 긍정적인 하이파이브 요청을 표시한다.
+
+다시 말하지만, 프로그램에 더 많은 테스트를 추가해라.
 
 #### 구현
 
@@ -213,24 +239,9 @@ void guardGate();
 <summary>구현 펼치기</summary>
 <div markdown="1">
 
-비교 연산자 오버로딩은 비교 연산자의 기존 기능인 bool 타입을 반환하는 방식을 구현하는 것을 권장한다.
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/02/ex02_01.png?raw=true)
+전 예제인 ScavTrap을 만드는 것과 매우 유사하다. ClapTrap을 상속받아 자식 클래스인 FragTrap을 만들어주는 것인데, 이번에는 생성자와 소멸자만 재정의해주고, 새로운 멤버함수만 설정해주면 된다.
 
-산술 연산자 또한 간단하다.
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/02/ex02_02.png?raw=true)
-
-증감 연산자는 전위와 후위의 형태가 다르다.
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/02/ex02_03.png?raw=true)
-
-C++에서는 전위와 후위 연산자 오버로딩을 구별하기 위해 인자에 void형과 int형으로 나누어 작성해야한다.
-
-전위 연산자 오버로딩은 this의 값을 증가시킨 후, *this의 레퍼런스를 반환한다. 여기서 그냥 'this'를 반환하려 하면, 임시 객체의 레퍼런스를 만들려고 하는 것이기 때문에 오류가 발생한다. '*this'를 반환해야 포인터의 원본 값을 반환하기 때문에 레퍼런스를 반환할 수 있다.
-
-후위 연산자 오버로딩은 임시로 만들어진 객체를 반환하는 것이기 때문에, 반환 받은 값을 다시 증감 연산을 했을 경우 임시 객체의 값이 증감할 수 있다. 따라서 const를 붙여준다.
-
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/02/ex02_04.png?raw=true)
-
-간단하게 구현할 수 있다.
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/03/ex02_00.png?raw=true)
 
 </div>
 </details>
@@ -239,36 +250,34 @@ C++에서는 전위와 후위 연산자 오버로딩을 구별하기 위해 인�
 
 #### 문제
 
-이제 기능적인 Fixed 클래스가 있으므로 사용하면 좋을 것이다.
+이번 예제에서는 너는 FragTrap의 반쪽과 ScavTrap의 반쪽짜리인 ClapTrap과 같은 괴물을 만들 것이다. 이것을 **DiamondTrap**이라고 이름짓고, FragTrap과 ScavTrap 둘 다 상속될 것이다. 이건 너무 위험하다 !
 
-점이 삼각형 안에 있는지 여부를 나타내는 함수를 구현해보자. 매우 유용할 것 같다. 그렇지 ?
+DiamondTrap은 private 속성으로 이름을 가질 것이다. 이 속성에 ClapTrap 기본 클래스의 변수 이름과 정확히 동일한 변수 이름(여기서는 로봇 이름에 대해 말하지 않음)을 지정한다.
 
-BSP는 이진 분할을 나타낸다.
+더 명확하게 하기 위해, 여기 두가지 예제가 있다.
+ClapTrap의 변수가 **name**이라면, DiamondTrap 중 하나에 **name**이라는 이름을 준다.
+ClapTrap의 변수가 **\_name**이라면, DiamondTrap 중 하나에 **\_name**이라는 이름을 준다.
 
-2D 포인트를 나타내는 OCCF 형식의 Point 클래스를 생성하여 시작하자.
+이 속성들과 멤버 함수들은 부모 클래스 중 하나에서 선택된다.
 
-- Private members
+- Name, 생정자의 매개변수로 전달됨
+- ClapTrap::name (생성자의 매개변수 + "\_clap_name" 접미사)
+- Hit points (FragTrap)
+- Energy points (ScavTrap)
+- Attack damage (FragTrap)
+- attack() (ScavTrap)
 
-  - Fixed const x
-  - Fixed const y
-  - 기타 유용한 것들
+게다가 두 부모 클래스의 특별한 함수들 외에도, DiamondTrap은 특별한 기능을 가질 것이다.
 
-- Public members
-  - x및 y를 0으로 초기화 하는 기본 생성자
-  - 두 개의 상수 부동 소수점 수를 매개변수로 사용하는 생성자. 해당 매개변수로 x, y를 초기화 해야한다.
-  - 복사 생성자
-  - 복사 할당 연산자 오버로드
-  - 소멸자
-  - 기타 유용한 것들
+void whoAmI();
 
-결론적으로, 적절한 파일에서 다음 함수를 구현해야 한다.
+이 멤버 함수는 이것의 이름과 ClapTrap의 이름을 보여줄 것이다.
 
-- bool bsp(Point const a, Point const b, Point const c, Point const point);
-  - a, b, c: 삼각형의 정점
-  - point: 확인할 점
-  - Returns: 점이 삼각형 안에 있으면 True, 아니라면 False를 반환한다.
+물론, DiamondTrap의 ClapTrap 서브객체는 한 번만 생성될 것이다. 그렇다. 트릭이 있다.
 
-클래스가 예상대로 작동하는지 확인하기 위해 자체 테스트를 구현하고 제출해라.
+다시 말하지만, 너의 프로그램에서 더 많은 테스트를 해라.
+
+-Wshadow, -Wno-shadow 컴파일러 플래그를 알고 있니 ?
 
 #### 구현
 
@@ -276,32 +285,31 @@ BSP는 이진 분할을 나타낸다.
 <summary>구현 펼치기</summary>
 <div markdown="1">
 
-Point 클래스는 다음과 같이 구현했다.
+DiamondTrap은 ScavTrap과 FragTrap에게 동시에 상속을 받아야 한다. 이렇게 하기 위해서는 앞선 예제인 ex01에서 ScavTrap의 attack()을 구현했을 때 처럼 virtual을 사용해주어야 한다. ClapTrap에서의 attack()과 ScavTrap에서의 attack()때문에 ClapTrap의 attack()에 virtual을 붙여준 것 처럼, 이번에는 클래스 자체에 virtual을 붙여주어야 한다. 다음 그림을 보면 이해가 조금 더 쉬울 것이다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/02/ex03_00.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/03/ex03_00.png?raw=true)
 
-Point 클래스는 OCCF에 맞게 구현해주면 되는 부분이라 수월했다.
+우리는 ClapTrap과 ScavTrap, FragTrap의 관계가 왼쪽의 관계라고 생각하고 코드를 구현할 것이다. 그러나 컴파일러에서는 오른쪽과 같이 ClapTrap이 메모리에 2개 존재하게 된다.
 
-bsq 함수는 삼각형 내부에 점이 위치해있는지 외부에 점이 위치해있는지 분별하는 함수이다. 이 함수에서는 Fixed 클래스에 대한 연산자 오버로딩과 Point 클래스에 대한 연산자 오버로딩을 추가적으로 해주었다.
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/02/ex03_01.png?raw=true)
+이 경우가 앞서 가상함수를 처리했던 ex01과 동일하게 ScavTrap의 헤더와 FragTrap의 헤더에서 ClapTrap 상속 부분에 virtual을 추가해주면 된다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/02/ex03_02.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/03/ex03_01.png?raw=true)
 
-벡터의 외적을 이용해 점의 위치를 판단할 수 있다.
+그런 다음, 과제의 요구대로 상속을 받아준다. 이 때, 먼저 입력한 부모 클래스의 순서대로 상속이 진행이 된다는 점을 알아두면 좋다. 이렇게 되면 문제가 발생하게 된다.
 
-- 외적을 구하는 공식은 점 a와 b의 (x, y, z) 좌표를 통해 구할 수 있는데, 이 문제에서는 2차원 평면이므로 계산이 굉장히 간결해진다.
-- 점 a의 (x, y, z) 좌표를 (ax, ay, az)라고 하고, 점 b도 마찬가지로 적용해 (bx, by, bz)라고 한다면 외적의 공식은 (ay\*bz - az\*by, az\*bx - ax\*bz, ax\*by - ay\*bx)이다.
-- bsp에 주어지는 4개의 점은 모두 2차원 평면에 위치하므로 z = 0으로 대입해주면 (0, 0, ax\*by - ay\*bx)가 외적이 되고, ax\*by - ay\*bx를 이 함수의 주요 값으로 활용한다.
-- bsp 내부의 선언을 통해 총 6개의 Point 클래스를 선언해준다. 이것은 각각 평면에서 벡터로 활용된다.
-- 벡터를 구했다면, \* 연산자 오버로딩을 통해 외적을 구해줄 수 있다.
-- 밑의 조건문을 만족한다면 3개의 벡터의 한쪽 방향에 점이 위치한다는 뜻으로, 삼각형 내부에 점이 위치함을 알 수 있다.
-- 이 조건을 만족하지 않으면 삼각형 내부에 점이 위치하는 것이다.
+DiamondTrap은 ScavTrap -> FragTrap 순으로 상속을 받게 되는데, 이 경우, ScavTrap을 통해 설정해주었던 ClapTrap의 멤버 변수들이 FragTrap을 통해 다시한번 모두 변경되게 된다. 이것 때문에 다음과 같은 코드가 동작하지 않는 현상이 발생한다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/03/ex03_02.png?raw=true)
+
+위처럼 코드를 작성하고 테스트를 해보면, ScavTrap의 energy points로 설정해주었던 값 50이 아닌, FragTrap으로 설정해주었던 값 100으로 설정된 것을 확인할 수 있다. ScavTrap -> FragTrap으로 상속을 받았기 때문에 모든 값이 FragTrap에 의해 초기화가 되었음을 알 수 있다.
+
+이 부분을 해결하기 위해 여러가지 방법을 찾아보았으나 .. 아쉽게도 ScavTrap 내부에서 protected로 변수를 설정해주는 것 외에 별 다른 방법을 찾아볼 수는 없었다. ClapTrap의 변수를 사용하는 과제이기 때문에, ScavTrap에서 다시 변수를 설정해주는 방식이 크게 매력적이지 않아서 그냥 상수를 입력해주는 형식으로 마무리하고, 다이아몬드 상속의 한계에 대해서 알고 넘어가는 방법을 택하게 되었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/03/ex03_03.png?raw=true)
 
 </div>
 </details>
 
 ## 느낀 점
 
-부동 소수점과 고정 소수점에 대해 어렴풋이 들어보았는데, 이번 과제를 계기로 조금 더 알 수 있게 된것 같다.
-
-또한, 평가를 다니면서 꽤나 많이 들어왔던 OCCF에 대해 처음 경험해볼 수 있었는데, 지난 cpp00과 cpp01에서 구현했던 내 클래스가 굉장히 권장되지 않는 구현이라는 느낌이 들었다. 이제부터 모든 cpp과제는 OCCF를 통해 클래스 구현을 해야한다고 하니, 익숙해지도록 많이 사용해봐야겠다.
+클래스의 상속에 대해 배워봤는데, 생각보다 간단하게 구현 가능하지만 강력한 기능이라 이번 기회에 잘 알고 넘어갈 수 있도록 시간을 들인것같다. 마지막 예제에서의 다이아몬드 상속은 웬만하면 그렇게 하지 말라고 하는 것 같았다. 사실 그렇게 할 이유도 딱히 없을 뿐더러, 멤버 변수와 함수들이 여러번 재정의 됨에 있어서 원하는 동작이 일어나지 않을 수 있기 때문이다.
