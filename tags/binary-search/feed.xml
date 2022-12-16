@@ -7,9 +7,19 @@
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
-      <lastBuildDate>Tue, 13 Dec 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Wed, 14 Dec 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://chanwoong1.github.io/tags/binary-search/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://chanwoong1.github.io/blog/algorithm_study/greedy_algorithm</guid>
+    <title>그리디 알고리즘</title>
+    <link>https://chanwoong1.github.io/blog/algorithm_study/greedy_algorithm</link>
+    <description>알고리즘 스터디 4주차 - 그리디 알고리즘</description>
+    <pubDate>Wed, 14 Dec 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>algorithm</category><category>algorithm study</category><category>python</category><category>boj</category><category>binary search</category>
+  </item>
+
   <item>
     <guid>https://chanwoong1.github.io/blog/algorithm_study/binary_search</guid>
     <title>이분탐색</title>
