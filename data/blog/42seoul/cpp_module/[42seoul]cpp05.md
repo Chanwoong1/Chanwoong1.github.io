@@ -1,7 +1,7 @@
 ---
 title: '[42seoul] CPP Module 05'
 date: '2022-12-18'
-tags: ['4th_circle', 'C++', 'OOP', '42seoul']
+tags: ['4th_circle', 'C++', 'OOP', 'exception', '42seoul']
 draft: false
 summary: Repetition and Exceptions
 layout: PostSimple
