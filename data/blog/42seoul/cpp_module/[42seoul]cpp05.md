@@ -336,7 +336,33 @@ Form 클래스에 대해서는 과제에서 요구한 대로 구현을 했다.
 <summary>구현 펼치기</summary>
 <div markdown="1">
 
-1
+먼저, Form 클래스를 추상 클래스로 바꿔주어야 한다. 별로 달라지는건 없고, 새로 추가되는 AForm을 상속받는 세개의 클래스들에서 재정의해줄 execute 함수를 순수 가상 함수로 만들어주었다.
+
+또한, 실행 권한 등급을 통한 실행 여부를 판단하는 멤버 함수를 만들어주어야 했기 때문에, 실행 권한 등급에 따른 예외처리 클래스도 만들어주었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/04/ex02_00.png?raw=true)
+
+그리고, Bureaucrat 클래스에서 Form의 실행을 담당하는 executeForm 멤버 함수를 만들어 주었는데, 이 함수 내부에서 execute 함수를 사용할 수 있도록 만들어, try-catch 문을 사용해 에러가 발생하면 에러를 출력할 수 있도록 만들어 주었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/04/ex02_01.png?raw=true)
+
+executeForm은 Form을 인자로 받는 함수이기 때문에, AForm을 상속받는 세개의 클래스를 모두 받아줄 수 있다. 하나의 executeForm 함수로 세 자식 클래스의 execute를 실행할 수 있게 되는 것이다.
+
+3개의 클래스는 각각 실행했을 때의 결과가 달라야한다. 과제에 구체적으로 명시되어 있는데, 여럽지 않게 구현해줄 수 있다.
+
+**ShrubberyCreationForm**은 권한을 만족했을 때, 작업 디렉토리 안에 ascii로 만들어진 나무를 \<target>\_shrubbery라는 파일에 저장해주어야 한다. 파일 저장은 module 01에서 해보았으니 쉽게 구현할 수 있을 것이고, 나무는 간단하게 직접 만들어주었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/04/ex02_02.png?raw=true)
+
+곧 다가오는 크리스마스에 대비해서, 눈오는 날의 나무를 만들어보았다.
+
+**RobotomyRequestForm**은 로봇화의 성공률이 50퍼센트가 되도록 멤버 함수를 만들어주어야 한다. 이 때, 성공률은 시간의 50%라고 되어있으므로, 현재 시각을 불러와서 2로 나누었을 때의 나머지를 통해 성공과 실패를 나누어 주었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/04/ex02_03.png?raw=true)
+
+시간은 \<ctime> 라이브러리에서 std::time_t 객체의 time 함수를 통해 구할 수 있다. 이때 반환되는 시간은 흔히 [유닉스시간(혹은 Epoch 시간)](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16) 이라고 하는 시간이 반환된다. 우리는 어차피 초단위만 사용하면 되기때문에 반환 받은 값을 별다른 변환 없이 2로 나누어 주기만 하면 된다.
+
+마지막으로 **PresidentialPardonForm**은 가장 쉽다. 그냥 등급에 맞는지 확인하고, 맞다면 적절한 메세지를 출력하면 된다.
 
 </div>
 </details>
