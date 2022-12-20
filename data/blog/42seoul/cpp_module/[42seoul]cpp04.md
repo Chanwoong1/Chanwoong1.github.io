@@ -18,8 +18,6 @@ layout: PostSimple
 - [Chapter 2](#chapter-2)
   - [General Rules](#general-rules)
 - [Chapter 3](#chapter-3)
-  - [New Rules](#new-rules)
-- [Chapter 4](#chapter-4)
   - [Ex00](#ex00)
   - [Ex01](#ex01)
   - [Ex02](#ex02)
@@ -193,19 +191,6 @@ C++은 복잡한 언어이기 때문에, 단순하게 유지하기 위해 내 �
 - 시작 전에 꼭 모듈의 과제를 읽어야만 한다. 정말이다 !
 
 ## Chapter 3
-
-### New rules
-
-이제부터, 모든 너의 클래스들은 달리 명시하지 않는 한, Orthodox Canonical Form으로 디자인 되어야한다. 그런 다음, 아래의 4개의 필수 멤버 함수를 구현한다.
-
-- 기본 생성자
-- 복사 생성자
-- 복사 할당 연산자
-- 소멸자
-
-클래스 코드를 두개의 파일로 나눈다. 헤더파일(.hpp/.h)은 클래스 정의가 포함되고, 소스 파일(.cpp)에는 구현이 포함된다.
-
-## Chapter 4
 
 ### Ex00
 

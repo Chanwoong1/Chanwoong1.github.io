@@ -15,8 +15,6 @@ layout: PostSimple
 - [Chapter 2](#chapter-2)
   - [General Rules](#general-rules)
 - [Chapter 3](#chapter-3)
-  - [New Rules](#new-rules)
-- [Chapter 4](#chapter-4)
   - [Ex00](#ex00)
   - [Ex01](#ex01)
   - [Ex02](#ex02)
