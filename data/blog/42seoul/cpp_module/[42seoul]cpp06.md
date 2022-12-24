@@ -82,9 +82,58 @@ C++에서는 위의 형변환 외 추가로 4개의 형변환 연산자(static_c
 
   다른 타입의 포인터로 변경할 시, 메모리 주소값이 유지되지 않는다.
 
+  ```C++
+  #include <iostream>
+
+  int main() {
+    int a = 123123;
+    // 정수값이 메모리 주소로 변환되어 들어가 매우 위험
+    int* pi = reinterpret_cast<int*>(a);
+
+    int* b = &a;
+    char* c;
+    //int * -> char *로 타입캐스팅된다. 컴파일러에 따라 값이 조금씩 다르다.
+    c = reinterpret_cast<char*>(b);
+
+    return 0;
+  }
+  ```
+
 - const_cast
 
   const를 제거할 때 사용한다.
+
+  ```C++
+  #include <iostream>
+
+  int main() {
+    char msg[] = "Hello";
+    const char* cp_msg = msg;
+    std::cout << cp_msg << std::endl;
+    //const char 이기때문에 변경 불가 (상수인 상태)
+    cp_msg[0] = 'Y';
+
+    char* copy = const_cast<char*>(cp_msg);
+    //const_cast를 통해 상수성이 제거되어서 변경 가능
+    copy[0] = 'Y';
+    std::cout << copy << std::endl;
+    return 0;
+  }
+
+  int main() {
+    int i = 100;
+    const int& c_ref = i;
+    std::cout << i << std::endl;
+
+    //const int& 이기때문에 변경이 불가능하다.
+    c_ref = 50;
+
+    int& ref = const_cast<int&>(c_ref);
+    ref = 50;
+    std::cout << ref << std::endl;
+    return 0;
+  }
+  ```
 
 - dynamic_cast
 
