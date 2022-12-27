@@ -242,25 +242,7 @@ double 리터럴의 예: 0.0, -4.2, 4.2...
 <summary>구현 펼치기</summary>
 <div markdown="1">
 
-지금까지 해왔던 대로 클래스를 구현한다면 쉽게 Bureaucrat 클래스를 구현할 수 있을 것이다.
-
-여기서 추가되는 점은, 예외 클래스를 정의해주어야 한다는 것이다. 과제에서는 Bureaucrat::GradeTooHighException과 같은 형식으로 예외를 발생시켜야 한다고 적혀있으므로, Bureaucrat 클래스 내부에 예외 발생 클래스를 정의해준다.
-
-이 때, std::exception 클래스를 상속받아 what 함수를 오버라이딩해주는 형식으로 클래스를 구현하면 된다.
-
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/04/ex00_00.png?raw=true)
-
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/04/ex00_01.png?raw=true)
-
-예외 처리 클래스를 보면, std::exception을 상속받은 GradeTooHighException 클래스를 만들어주고 있다.
-
-이 중, 우리는 가상함수인 what 함수에 대해 오버라이딩을 해주면 된다.
-
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/04/ex00_02.png?raw=true)
-
-메인문에 적절하게 테스트 작성 후 동작시켜보면 된다.
-
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/04/ex00_03.png?raw=true)
+예제 00은 string으로 들어오는 입력값을 다른 형태로 변환해서 출력하는 문제이다. 이 문제를 쉽게 접근하기 위해, 먼저 들어오는 입력값을 double 형으로 변환해주는 작업을 해 주었다. 모든 입력값이 double형으로 변환되면, 문제의 조건에 맞추어 값을 출력해주면 되기 때문에 한결 쉬워진다.
 
 </div>
 </details>
