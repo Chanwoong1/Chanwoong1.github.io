@@ -7,7 +7,7 @@ summary: C++ casts
 layout: PostSimple
 ---
 
-# Cpp Module 05
+# Cpp Module 06
 
 - [Chapter 0](#chapter-0)
   - [Try - Catch](#try---catch)
@@ -21,7 +21,6 @@ layout: PostSimple
   - [Ex00](#ex00)
   - [Ex01](#ex01)
   - [Ex02](#ex02)
-  - [Ex03](#ex03)
 - [느낀 점](#느낀-점)
 
 ## Chapter 0
