@@ -5,6 +5,11 @@ import SocialIcon from '@/components/social-icons'
 export default function Footer() {
   return (
     <footer>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7132344735506626"
+        crossOrigin="anonymous"
+      ></script>
       <div className="mt-10 flex flex-col items-center">
         <div className="mb-5">
           <a href="https://hits.seeyoufarm.com">
