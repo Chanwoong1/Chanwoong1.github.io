@@ -244,6 +244,18 @@ double 리터럴의 예: 0.0, -4.2, 4.2...
 
 예제 00은 string으로 들어오는 입력값을 다른 형태로 변환해서 출력하는 문제이다. 이 문제를 쉽게 접근하기 위해, 먼저 들어오는 입력값을 double 형으로 변환해주는 작업을 해 주었다. 모든 입력값이 double형으로 변환되면, 문제의 조건에 맞추어 값을 출력해주면 되기 때문에 한결 쉬워진다.
 
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/06/ex00_00.png?raw=true)
+
+try 부분에서 double 형으로 변환을 해 주는데, 만약 형 변환이 제대로 이루어지지 않았다면 출력할 수 없는 리터럴로 판단하여 에러를 발생시키도록 구현했다.
+
+위 부분에서 strtod함수는 문자 스트링을 해석할 수 있는 곳까지 해석해서 double형으로 표현된 값을 반환해준다. 이 함수를 통해 우리는 입력값을 double 형으로 변환해주는 작업을 해줄 수 있고, strtod에 의해 표현할 수 없는 값들은 0이 반환되어 에러를 발생시킬 수도 있다.
+
+try부분에서 에러가 발생한다면, catch문을 통해 \_error 값을 True로 바꾸어준 뒤, 연산자 오버로딩을 통해 재정의한 함수에서 에러에 대한 출력을 구현해주었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/06/ex00_01.png?raw=true)
+
+에러가 아니라면, printResult 함수를 통해 결과를 출력해주었다.
+
 </div>
 </details>
 
@@ -251,34 +263,23 @@ double 리터럴의 예: 0.0, -4.2, 4.2...
 
 #### 문제
 
-이제 bureaucrat가 생겼으니, 무언가 할 일을 주자. 양식 더미를 채우는 것보다 더 좋은 활동이 어디 있겠는가 ?
+다음 함수들을 구현하자:
 
-그렇다면, Form 클래스를 만들어보자. 그것은 :
+uintptr_t serialize(Data\* ptr);
 
-- const name
-- 사인 여부를 포함하는 boolean (생성자에서는 하지 않음으로)
-- 사인 권한 등급
-- 실행 권한 등급
+이 함수는 포인터를 받아 unsigned integer 형인 uintptr_t로 변환한다.
 
-이 모든것은 **private** 속성이다. protected가 아니다.
+Data\* deserialize(uintptr_t raw);
 
-Form의 등급은 Bureaucrat에 적용되는 동일한 규칙을 따른다. 따라서 Form의 등급이 범위를 벗어나면 다음 예외가 발생한다.
+이 함수는 unsigned integer 인자를 받아 Data형 포인터로 변환한다.
 
-**Form::GradeTooHighException**, **Form::GradeTooLowException**
+너의 함수들이 예상대로 동작하는지 테스트하는 프로그램을 작성해라.
 
-전과 동일하게, 모든 속성에 대한 getter와 모든 양식의 정보를 출력하는 (\<\<) 연산자의 오버로드를 작성한다.
+너는 비어있지 않은(데이터 멤버를 갖고있음을 의미.) **Data** 구조체를 만들어야 한다.
 
-또한 Form에서 Bureaucrat을 인자로 받는 **beSigned()** 멤버 함수를 추가한다. 이것은 bureaucrat의 등급이 충분히 높을 경우(요구 등급보다 높거나 같음)에 form의 사인 상태를 바꾼다. 1등급이 2등급보다 높다는것을 기억해라. 등급이 너무 낮다면 Form::GradeTooLowException을 통해 예외를 발생해라.
+Data 객체의 주소로 **serialize()**를 사용하고 반환 값을 **deseialize()**에 전달한다. 그 다음, **deserialize()**의 반환값이 원본 포인터와 동일한지 비교한다.
 
-마지막으로, **signForm()** 멤버 함수를 Bureaucrat에 추가하자. 만약 사인을 받았다면, 이것은 다음과 같이 출력할 것이다.
-
-**\<bureaucrat> signed \<form>**
-
-받지 않았다면, 다음을 출력할 것이다.
-
-**\<bureaucrat> couldn't sign \<form> because \<reason>.**
-
-모든 것이 예상대로 작동하는지 확인하기 위해 몇 가지 테스트를 구현하고 제출하자.
+너의 Data 구조체의 파일을 제출하는것을 잊지 말아라.
 
 #### 구현
 
@@ -286,11 +287,17 @@ Form의 등급은 Bureaucrat에 적용되는 동일한 규칙을 따른다. 따�
 <summary>구현 펼치기</summary>
 <div markdown="1">
 
-Form 클래스에 대해서는 과제에서 요구한 대로 구현을 했다.
+문제 자체는 00번 예제와 비교하면 굉장히 간단한 문제였다. 하지만 uintptr_t라는 타입을 처음봐서 알고 넘어가야겠다는 생각이 들었다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/04/ex01_00.png?raw=true)
+- uintptr_t
 
-어려운 구현을 요구하는 것이 아니라 난이도 자체는 괜찮았는데, Bureaucrat.hpp 에서는 Form.hpp를 불러오고, Form.hpp에서는 Bureaucrat.hpp를 불러오면서 오류가 발생했다. 한참 고민하다가 Bureaucrat.hpp에서 class Form을 먼저 선언해주는 것으로 해결했다.
+  포인터를 저장하는 타입 중 하나이다. 이 타입을 통해 다른 타입으로 조금 더 안전하게 변환할 수 있다.
+
+  시스템 내부에서 사용하는 포인터와 같은 크기이며, 포인터를 정수 표현으로 변환할 때 유용하게 사용할 수 있다.
+
+이 문제에서는 reinterpret_cast를 사용해보는 문제였다. C++에서는 [포인터->포인터, 값->포인터, 포인터->값] 변환 모두 별도의 형변환을 명시해주어야 사용할 수 있다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/06/ex01_00.png?raw=true)
 
 </div>
 </details>
@@ -299,37 +306,25 @@ Form 클래스에 대해서는 과제에서 요구한 대로 구현을 했다.
 
 #### 문제
 
-기초 양식을 가지고 있으므로, 실제 작업을 수행하는 몇 가지 양식을 더 만들어 볼 차례이다.
+public한 가상 소멸자만 가지는 **Base** 클래스를 구현해라. Base를 상속받는 **A**, **B**, **C** 클래스를 생성해라.
 
-모든 상황에서, 기본 클래스 Form은 추상 클래스가 되어야 하기 때문에, AForm으로 이름을 변경해야한다. Form의 속성은 private로 유지되어야 하며 기본 클래스에 남아있어야 함을 명심하자.
+> > 이 네개의 클래스들은 OCCF로 디자인하지 않아도 된다.
 
-다음의 구체적인 클래스들을 추가하자.
+다음 함수들을 구현해라:
 
-- ShrubberyCreationForm: 요구 등급: sign 145, exec 137
+Base\* generate(void);
 
-  \<target>\_shrubbery 파일을 작업 디렉토리에 만들고, ASCII 트리를 파일 내부에 작성한다.
+A, B 또는 C를 임의로 인스턴스화하고 인스턴스를 Base 포인터로 반환한다. 랜덤 추출을 구현하기 위해 원하는 것을 자유롭게 사용해라.
 
-- RobotomyRequestForm: 요구 등급: sign 72, exec 45
+void identify(Base\* p);
 
-  약간의 드릴 소리를 낸다. 그리고, \<target>은 50%의 시간 동안 성공적으로 로봇화되었음을 알린다. 그렇지 않다면, 로봇공학은 실패했음을 알린다.
+void identify(Base& p);
 
-- PresidentialPardonForm: 요구 등급: sign 25, exec 5
+p가 가리키는 객체의 실제 유형("A", "B" 또는 "C")를 출력한다.
 
-  \<target>이 Zaphod Beeblebrox에 의해 사면되었음을 알린다.
+이 함수 내에서 포인터를 사용하는 것은 금지된다. typeinfo 헤더를 포함하는것도 금지된다.
 
-그들 모두는 생성자에서 Form의 대상인 하나의 매개변수만 사용한다. 예를들어 shrubbery를 집에 심고 싶다면 "집"이라고 입력한다.
-
-이제, **execute(Bureaucrat const & executer) const** 멤버 함수를 기본 form에 추가하고, 구체적인 클래스의 양식 동작을 실행하는 함수를 구현한다. 양식에 서명이 되어있고 양식을 실행하려는 bureaucrat의 등급이 충분히 높은지 확인해야한다. 그렇지 않다면 적절한 예외를 발생시킨다.
-
-모든 구체적인 클래스 또는 기본 클래스에서 요구 사항을 확인하고 싶은지(그리고 다른 함수를 호출해 양식을 실행한다)는 사용자에게 달려있다. 그러나 한 가지 방법은 다른 방법보다 이쁘다.
-
-마지막으로, Bureaucrat에 \*\*executeForm(Form const & form) 멤버 함수를 추가한다. 이것은 form의 실행을 시도해야 한다. 성공한다면 다음과 같이 입력한다.
-
-**\<bureaucrat> executed \<form>**
-
-아니라면, 명시적인 에러메세지를 출력해라.
-
-모든 것이 예상대로 작동하는지 확인하기 위해 몇 가지 테스트를 구현하고 제출해라.
+모든것이 예상대로 작동하는지 테스트하는 프로그램을 작성해라.
 
 #### 구현
 
@@ -337,72 +332,19 @@ Form 클래스에 대해서는 과제에서 요구한 대로 구현을 했다.
 <summary>구현 펼치기</summary>
 <div markdown="1">
 
-먼저, Form 클래스를 추상 클래스로 바꿔주어야 한다. 별로 달라지는건 없고, 새로 추가되는 AForm을 상속받는 세개의 클래스들에서 재정의해줄 execute 함수를 순수 가상 함수로 만들어주었다.
+이번 예제는 dynamic_cast를 사용하는 문제였다. 상속 구조를 만들어서 업캐스팅 후, 자신의 타입이 무엇인지 밝히는것이 목표이다.
 
-또한, 실행 권한 등급을 통한 실행 여부를 판단하는 멤버 함수를 만들어주어야 했기 때문에, 실행 권한 등급에 따른 예외처리 클래스도 만들어주었다.
+dynamic_cast는 주로 부모를 가리키는 포인터를 자식을 가리키도록 바꾸는 다운 캐스팅에 사용되는 캐스팅이다. 만약 부모 클래스가 가상 함수가 있는 추상 클래스라면 자식의 주소를 따로 저장해두기 때문에 다운 캐스팅이 가능하다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/04/ex02_00.png?raw=true)
+상속 구조를 갖는 객체들 간에는 부모 클래스를 메모리 상에 가지고 있기 때문에, 자식 클래스를 부모 클래스의 포인터로 참조하는것이 가능해, 업 캐스팅 시 아무런 문제가 없었다. 하지만, 자식 클래스가 업 캐스팅 된 부모 클래스 형태가 아니라 순수한 부모 클래스(추상 클래스가 아닌)를 이용하는 경우, 부모 클래스를 메모리 상에 유지하고 있지 않기 때문에 자식 클래스로 다운 캐스팅은 문제가 될 수 있다.
 
-그리고, Bureaucrat 클래스에서 Form의 실행을 담당하는 executeForm 멤버 함수를 만들어 주었는데, 이 함수 내부에서 execute 함수를 사용할 수 있도록 만들어, try-catch 문을 사용해 에러가 발생하면 에러를 출력할 수 있도록 만들어 주었다.
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/06/ex02_00.png?raw=true)
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/04/ex02_01.png?raw=true)
-
-executeForm은 Form을 인자로 받는 함수이기 때문에, AForm을 상속받는 세개의 클래스를 모두 받아줄 수 있다. 하나의 executeForm 함수로 세 자식 클래스의 execute를 실행할 수 있게 되는 것이다.
-
-3개의 클래스는 각각 실행했을 때의 결과가 달라야한다. 과제에 구체적으로 명시되어 있는데, 여럽지 않게 구현해줄 수 있다.
-
-**ShrubberyCreationForm**은 권한을 만족했을 때, 작업 디렉토리 안에 ascii로 만들어진 나무를 \<target>\_shrubbery라는 파일에 저장해주어야 한다. 파일 저장은 module 01에서 해보았으니 쉽게 구현할 수 있을 것이고, 나무는 간단하게 직접 만들어주었다.
-
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/04/ex02_02.png?raw=true)
-
-곧 다가오는 크리스마스에 대비해서, 눈오는 날의 나무를 만들어보았다.
-
-**RobotomyRequestForm**은 로봇화의 성공률이 50퍼센트가 되도록 멤버 함수를 만들어주어야 한다. 이 때, 성공률은 시간의 50%라고 되어있으므로, 현재 시각을 불러와서 2로 나누었을 때의 나머지를 통해 성공과 실패를 나누어 주었다.
-
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/04/ex02_03.png?raw=true)
-
-시간은 \<ctime> 라이브러리에서 std::time_t 객체의 time 함수를 통해 구할 수 있다. 이때 반환되는 시간은 흔히 [유닉스시간(혹은 Epoch 시간)](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16) 이라고 하는 시간이 반환된다. 우리는 어차피 초단위만 사용하면 되기때문에 반환 받은 값을 별다른 변환 없이 2로 나누어 주기만 하면 된다.
-
-마지막으로 **PresidentialPardonForm**은 가장 쉽다. 그냥 등급에 맞는지 확인하고, 맞다면 적절한 메세지를 출력하면 된다.
+dynamic_cast를 사용한다면 형 변환 가능 여부를 확인할 수 있도록 되어있어, 위와 같이 구현해줄 수 있다. 포인터 변환은 실패했을 경우 NULL을 받을 수 있어 if문으로만 처리가 가능하다. 하지만, 레퍼런스형의 경우, 레퍼런스는 NULL값을 가질 수 없으므로 에러가 발생하게 된다. 따라서 try-catch문을 사용해 코드를 구현해주었다.
 
 </div>
 </details>
 
-### Ex03
-
-#### 문제
-
-우리의 양식들을 채우는것이 충분히 화가나기 때문에, 우리 관료들에게 하루 종일 이걸 하라고 하는것은 잔인할 것이다. 운좋게도, 인턴이 존재한다. 이번 예제에서는 **인턴**클래스를 구현해야한다. 인턴은 이름도 등급도 고유한 특성도 가지고 있지 않다. 관료들이 신경쓰는 유일한 것은 그들이 일을 하는것이다.
-
-그러나, 인턴은 makeForm 함수라는 중요한 것을 하나 가진다. 이것은 두개의 문자열이 필요하다. 첫 문자열은 양식의 이름이고, 두번째는 양식의 타겟 이름이다. 이것은 두번째 인자로 초기화될 **양식 객체**(이름은 매개변수로 전달된 이름이다.)에 대한 포인터를 반환한다.
-
-다음과 같이 출력될 것이다.
-
-**Intern creates \<form>**
-
-만약 양식 이름이 인자로써 존재하지 않는다면, 명시적인 에러 메세지를 출력해야한다.
-
-너는 if/elseif/else 숲처럼 가독성이 떨어지고 못생긴 해법을 피해야만 한다. 이것들은 평가 과정에서 허용되지 않는다. 너는 더이상 피신 속에 있지 않다. 평소와 같이, 모든것이 예상대로 동작하는지 테스트를 해야한다.
-
-예를 들어, 다음 코드는 "Bender" 라는 타겟으로 **RobotomyRequestForm**을 생성한다.
-
-```C++
-{
-  Intern someRandomIntern;
-  Form* rrf;
-
-  rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-}
-```
-
-#### 구현
-
-인턴 클래스의 구현은 굉장히 쉬웠다. 일단, 이름, 등급, 등등의 것들이 존재하지 않는다는 언급이 클래스에서 변수를 가지고 있지 않다고 해석했고, 따라서 기본 OCCF 형식의 클래스로만 만들고난 뒤, 구현을 따로 해주지 않았다.
-
-makeForm 멤버 함수를 만들어주기만 하면 되었는데, module 01의 ex06에서 사용했던 **switch-case** 문으로 if/elseif/else의 사용 없이 문제를 해결할 수 있었다.
-
-인턴을 통해 AForm 형식을 반환받도록 구현하면 되기 때문에, 테스트는 ex02에서 사용했던 테스트를 변형하는 형식으로 확인해볼 수 있었다.
-
 ## 느낀 점
 
-이번 과제는 예외처리에 대해 조금 더 명확한 예외 처리를 해보는 것을 요구하는 과제였는데, try-catch문을 처음 사용해보는 것은 아니어서 해볼만 했다. 하지만, 귀찮다는 이유로 혹은 norminette나 과제의 요구 사항을 이유로 사실 잘 사용하지 않았었는데, 이번 과제를 계기로 사용 빈도를 늘릴 수 있도록 노력 할 것이다. 확실히 더 가독성 있는 코딩과 유지보수 측면에서 조건문을 통한 예외처리보다 더 낫다는 장점이 있기 때문에 안할 이유 또한 없다.
+이번 과제는 형변환에 대해 알아보는것이 목표였다. 과제에서 구현하라고 하는것은 꽤나 간단했지만, C++에서는 형변환에 필요한 연산자들이 4개가 존재하고, 그 연산자들의 개념이 좀 어려웠다. 형변환 연산자들을 아직은 적절하게 사용하지는 못하지만, 계속 과제를 해나가면서 익숙해지도록 연습해야겠다.
