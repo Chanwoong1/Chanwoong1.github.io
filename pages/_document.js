@@ -8,6 +8,11 @@ class MyDocument extends Document {
         <Head>
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7132344735506626"
+            crossOrigin="anonymous"
+          ></script>
+          <script
             dangerouslySetInnerHTML={{
               __html: `
             window.dataLayer = window.dataLayer || [];
