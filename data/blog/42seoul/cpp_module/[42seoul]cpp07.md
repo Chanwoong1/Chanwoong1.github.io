@@ -3,7 +3,7 @@ title: '[42seoul] CPP Module 07'
 date: '2022-12-28'
 tags: ['4th_circle', 'C++', 'OOP', 'templates', '42seoul']
 draft: false
-summary: C++ casts
+summary: C++ templates
 layout: PostSimple
 ---
 
@@ -307,6 +307,34 @@ T 타입의 요소를 포함하는 클래스 템플릿인 **Array**를 개발하
 <div markdown="1">
 
 마지막 예제는 배열을 구현하는 문제이다. 이 문제를 통해 클래스 템플릿을 배우는 것이 목표이며, 모듈 07 중 가장 할 것이 많은 문제였다.
+
+문제를 보면, Array.hpp를 만들고, 선택사항으로 Array.tpp를 만들어도 된다는 정보가 있다. 이 뜻은, 원착상 템플릿의 경우 헤더 파일에서 정의를 해주어야 하는데, 클래스 템플릿을 헤더 파일에서 정의하면 양이 꽤 많아져서 tpp 파일을 통해 cpp파일에 정의하는것 처럼 분리해도 된다는 뜻인데.. 나는 그냥 hpp파일에 모두 정의해주었다.
+
+먼저, 과제의 요구대로 구현을 시작해주었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/07/ex02_00.png?raw=true)
+
+인자가 들어오지 않는 경우, 빈 배열을 만든다라고 하는데, 0의 크기를 가진 빈 배열이라면 결국 NULL 주소를 가리기는 것이 맞다고 생각했다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/07/ex02_01.png?raw=true)
+
+인자가 들어오는 경우에는 new를 이용해 배열을 만들어주었고, 들어오는 인자가 0일 경우를 생각해 조건문을 달아주었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/07/ex02_02.png?raw=true)
+
+복사생성자와 할당 연산자 오버로드도 비슷하게 만들어주었다. \[ ] 연산자로 요소에 접근할 수 있도록 기능을 구현할것이기 때문에, ref[idx]라는 표현을 사용했다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/07/ex02_03.png?raw=true)
+
+이 부분에서 \[ ] 연산자를 오버로드 해주었다. 연산자 오버로드를 통해 클래스에서 바로 인덱스만으로 요소에 접근할 수 있도록 구현해줄 수 있다. 조건 중에는 잘못된 인덱스 접근일 경우 예외를 발생시키라고 되어있어서 그 부분도 작성해주었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/07/ex02_04.png?raw=true)
+
+예외처리를 위한 클래스를 만들어주었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/07/ex02_05.png?raw=true)
+
+마지막으로 배열의 크기를 반환하는 함수를 만들어주었다.
 
 </div>
 </details>
