@@ -7,9 +7,19 @@
       <language>ko</language>
       <managingEditor>jcw7468@naver.com (Chanwoong Jeong)</managingEditor>
       <webMaster>jcw7468@naver.com (Chanwoong Jeong)</webMaster>
-      <lastBuildDate>Wed, 28 Dec 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Sat, 31 Dec 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://chanwoong1.github.io/tags/c/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://chanwoong1.github.io/blog/42seoul/cpp_module/[42seoul]cpp08</guid>
+    <title>[42seoul] CPP Module 08</title>
+    <link>https://chanwoong1.github.io/blog/42seoul/cpp_module/[42seoul]cpp08</link>
+    <description>Templated containers, iterators, algorithms</description>
+    <pubDate>Sat, 31 Dec 2022 00:00:00 GMT</pubDate>
+    <author>jcw7468@naver.com (Chanwoong Jeong)</author>
+    <category>4th_circle</category><category>C++</category><category>OOP</category><category>iterators</category><category>algorithm</category><category>42seoul</category>
+  </item>
+
   <item>
     <guid>https://chanwoong1.github.io/blog/42seoul/cpp_module/[42seoul]cpp07</guid>
     <title>[42seoul] CPP Module 07</title>
