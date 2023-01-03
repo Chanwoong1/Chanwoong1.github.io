@@ -347,37 +347,25 @@ MutantStack으로 처음 실행하고 두번째로 MutantStack을 예를 들어 
 <summary>구현 펼치기</summary>
 <div markdown="1">
 
-마지막 예제는 배열을 구현하는 문제이다. 이 문제를 통해 클래스 템플릿을 배우는 것이 목표이며, 모듈 07 중 가장 할 것이 많은 문제였다.
+마지막 예제는 stack 컨테이너에 iterator를 추가하라는 문제였다. 스택은 컨테이너 어댑터 중 하나이며, 컨테이너 어댑터란 기존 컨테이너의 인터페이스를 제한해서 만들어, 기능이 제한되거나 변형된 컨테이너를 의미한다. 컨테이너 어댑터는 iterator를 지원하지 않아서 스택 또한 iterator가 없다.
 
-문제를 보면, Array.hpp를 만들고, 선택사항으로 Array.tpp를 만들어도 된다는 정보가 있다. 이 뜻은, 원착상 템플릿의 경우 헤더 파일에서 정의를 해주어야 하는데, 클래스 템플릿을 헤더 파일에서 정의하면 양이 꽤 많아져서 tpp 파일을 통해 cpp파일에 정의하는것 처럼 분리해도 된다는 뜻인데.. 나는 그냥 hpp파일에 모두 정의해주었다.
+MutantStack이 스택의 기능을 모두 사용할 수 있으면서, 반복자 기능도 추가시켜주려면, 먼저 MutantStack을 std::stack에서 상속받을 수 있어야 한다.
 
-먼저, 과제의 요구대로 구현을 시작해주었다.
+또한, 여러 타입이 들어올 수 있으므로 클래스 템플릿으로 구현해주어야 한다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/07/ex02_00.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/08/ex02_00.png?raw=true)
 
-인자가 들어오지 않는 경우, 빈 배열을 만든다라고 하는데, 0의 크기를 가진 빈 배열이라면 결국 NULL 주소를 가리기는 것이 맞다고 생각했다.
+스택의 원본을 보면, 컨테이너 클래스가 지정되지 않을 경우 deque를 사용해서 구현한다고 되어있다. 따라서 MutantStack의 반복자는 deque의 반복자를 참고하여 만들어주었다.
 
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/07/ex02_01.png?raw=true)
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/08/ex02_01.png?raw=true)
 
-인자가 들어오는 경우에는 new를 이용해 배열을 만들어주었고, 들어오는 인자가 0일 경우를 생각해 조건문을 달아주었다.
-
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/07/ex02_02.png?raw=true)
-
-복사생성자와 할당 연산자 오버로드도 비슷하게 만들어주었다. \[ ] 연산자로 요소에 접근할 수 있도록 기능을 구현할것이기 때문에, ref[idx]라는 표현을 사용했다.
-
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/07/ex02_03.png?raw=true)
-
-이 부분에서 \[ ] 연산자를 오버로드 해주었다. 연산자 오버로드를 통해 클래스에서 바로 인덱스만으로 요소에 접근할 수 있도록 구현해줄 수 있다. 조건 중에는 잘못된 인덱스 접근일 경우 예외를 발생시키라고 되어있어서 그 부분도 작성해주었다.
-
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/07/ex02_04.png?raw=true)
-
-예외처리를 위한 클래스를 만들어주었다.
-
-![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/cpp_module/07/ex02_05.png?raw=true)
-
-마지막으로 배열의 크기를 반환하는 함수를 만들어주었다.
+deque의 반복자는 [begin, end, rbegin, rend, cbegin, cend, crbegin, crend]가 있는데, 여기서 c가 붙은 반복자 함수들은 C++ 11의 함수들이라 따로 구현해주지 않았다. 나머지 함수들은 각각 반환하는 타입에 따라 구현해주었다.
 
 </div>
 </details>
 
 ## 느낀 점
+
+그동안, 파이썬으로 자료구조에 관한 문제를 풀어보거나 파이썬에서의 자료구조에 대해서만 공부를 해서 C++에서의 STL Containers을 처음 다루어 보는 입장에서 익숙하지만 쉽지 않은 과제였다. 특히 C++ 모듈 과제가 순차적으로 이전 모듈에서 공부했던 개념들을 다음 과제부터 계속 적용하면서 나아가는 과제라서 그런지 마지막 과제인 모듈 08은 굉장히 간단하게 문제 설명이 되어있었지만, 막상 구현하는 과정에서는 어려움을 많이 느꼈었다. 다음 서클에서 ft_containers라는 과제로 STL에 대해 더 깊게 공부해볼 수 있는 기회가 있는데, 그 과제를 하기 전까지 STL에 대해 조금 더 알아보는 시간을 가져야겠다.
+
+C++ 모듈 과제를 들어갈 때에는 한달안에 9개의 과제를 모두 끝낼 수 있을 것이라 생각했는데, 연말이라는 상황과 귀차니즘으로 인해 해를 넘겨서도 평가를 받아야 했다. 그래도 한달동안 C++에 대해 기초부터 공부해보면서 많은 것을 알 수 있었고, 다음 과제에 대한 자신감도 가지고 갈 수 있게 된것 같다.
