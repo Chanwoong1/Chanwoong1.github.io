@@ -7,6 +7,7 @@ import formatDate from '@/lib/utils/formatDate'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import Tag from '@/components/Tag'
+import Script from 'next/script'
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { date, title, tags } = frontMatter
@@ -17,6 +18,11 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       <ScrollTopAndComment />
       <article>
         <div>
+          <Script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7132344735506626"
+            crossorigin="anonymous"
+          ></Script>
           <header>
             <div className="space-y-1 border-b border-gray-200 pb-10 text-center dark:border-gray-700">
               <dl>
