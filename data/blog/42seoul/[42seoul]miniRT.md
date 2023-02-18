@@ -206,3 +206,113 @@ cy    50.0,0.0,20.6 0,0,1.0       14.2   21.42    10,0,255
 이번 과제는 팀 과제이기도 하지만, 다른 사람들과 함께 협업할 때 사용하는 깃허브 전략에 대해 조금 더 많이 사용해보고 싶어서 스터디를 진행하게 되었다. 스터디는 3주정도로 계획하고 있고, git flow 전략에 따른 branch 관리를 중점으로 진행하고자 한다.
 
 ### Parse
+
+파싱은 서브젝트에 있는 양식들을 그대로 따르면서, 편의성과 기능적인 부분을 향상시킬 수 있도록 주석도 처리할 수 있도록 하였다. 기본적인 규칙은 맨 앞의 **Identifier**에 따라 함수가 나뉘면서 파싱이 되는 형식을 취했다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minirt/06_00.png?raw=true)
+
+식별자에 따라 다른 처리를 해줬고, 각각의 요소에서 적절하게 처리를 해주었다.
+
+### MLX
+
+파싱이 제대로 되었다면, MLX 라이브러리를 통해 그림을 그려줄 준비를 해야한다. miniRT 과제는 한 픽셀마다 빛이 뻗어나가면서 물체에 충돌한다면 충돌한 물체의 색을 그려주는 형식으로 진행된다. 따라서 픽셀 하나하나를 그려줄 수 있도록 mlx함수를 사용해주어야 한다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minirt/06_01.png?raw=true)
+
+사실 쓰레드를 통해 더욱 빠르게 렌더링을 하려했으나.. mlx라이브러리 내부의 문제로 인해 쓰레드를 사용했을 때, 적절하게 렌더링되지 않는 현상이 발견되었다. 함수 이름에 'thread'가 들어있는 이유가 바로 그것... 이 mlx 라이브러리에서 이미지 생성을 해주고, 그 이미지에 픽셀 하나하나의 색을 계산해서 그려주게 된다.
+
+### RayTracing
+
+픽셀마다 색을 계산해주기 위해 이번 과제의 핵심인 [RayTracing](https://en.wikipedia.org/wiki/Ray_tracing_(graphics)) 기술이 들어가게 된다. 엄청나게 설명이 잘 되어있는 레퍼런스들이 많으므로 참고하길 바란다.. 사실 그래픽에 대해 문외한인 필자의 설명보다 전 세계 유수한 석학들의 레퍼런스를 참고하는것이 더 좋을....
+
+[Ray Tracing in One Weekend Series](https://raytracing.github.io/)
+
+[Phong Reflection Model](https://en.wikipedia.org/wiki/Phong_reflection_model)
+
+[Texture Mapping](http://raytracerchallenge.com/bonus/texture-mapping.html)
+
+[Normal Mapping](https://en.wikipedia.org/wiki/Normal_mapping)
+
+[Line Cone Intersection(원뿔 경계면 구하기)](http://illusioncatalyst.com/notes_files/mathematics/line_cone_intersection.php)
+
+[sham 님의 miniRT 시리즈](https://velog.io/@sham/series/miniRT)
+
+[3차원 벡터 회전 변환](https://m.blog.naver.com/kimjw1218/70178629876)
+
+위의 자료들을 참고해서 구현했다.
+
+#### 구현
+
+RayTracing을 구현하기 위해서는 카메라(원점)로부터 각각의 모니터(픽셀단위)로 뻗어나가는 빛들에 대한 방향벡터를 구해주어야 한다. 이 방식을 쉽게 구현하기 위해 우리는 입력받은 카메라 위치를 무조건 원점( [0, 0, 0] )으로, 카메라 방향은 ( [0, 0, 1] )로 설정했다.
+
+또, 모니터 픽셀에 대한 좌표를 알아야하는데, 이것은 가상의 모니터 (우리는 mlx window의 width와 height으로 설정했다)와 [fov(시야각)](https://ko.wikipedia.org/wiki/%ED%99%94%EA%B0%81_(%EC%82%AC%EC%A7%84%EC%88%A0))을 통해 구해주었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minirt/06_02.png?raw=true)
+
+예를들면 fov = 90이고, wid, hei가 각각 600이라면 모니터와 카메라간의 거리는 삼각함수로 구할 수 있다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minirt/06_03.png?raw=true)
+
+아래의 함수를 통해 거리를 구한다면 300이라는 값이 나올 것이다.
+
+그렇게 해서 600x600의 해상도에서 한 픽셀 ([x, y])에 대한 3차원 좌표는 ([x, y, 300])이 되고, 카메라의 원점과 [x, y, 300]으로 방향벡터를 구해주면 빛의 방향이 계산된다.
+
+#### 충돌 판정
+
+우리는 학창시절에 2차원 평면에서 원과 직선이 만나는 점의 갯수를 구했던 적이 있었다. (기억 안나거나 없었다면 miniRT 하지말고 cub3d 하길 바람..) 점의 갯수를 구하기 위해서는 근의공식을 사용했었는데, 근의공식 값이 양수(2개), 0(1개), 음수(만나지않음)로 점의 갯수를 판단했다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minirt/06_04.png?raw=true)
+
+Ray Tracing에서는 3차원에 대해 점의 갯수를 구하는것과 같다. 구, 원기둥, 평면과 같은 모든 객체들은 충돌 유무를 판단하기 위한 각각의 판별식이 존재하는데, 우리는 그 판별식을 이용해 값이 0 이상이라면 도형의 색을 반환해주는 방식으로 3차원 그림을 그려줄 수 있는 것이다 !
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minirt/06_05.png?raw=true)
+
+여러 판별식 중, 가장 간단한 구체에 대한 판별식이다. [레퍼런스](https://www.scratchapixel.com/lessons/3d-basic-rendering/minimal-ray-tracer-rendering-simple-shapes/ray-sphere-intersection.html)를 먼저 봐도 좋다. 우리가 파싱을 통해 모든 객체의 값을 올바르게 가져왔다면, 거기서부터는 판별식에 따라 값을 대입해주기만 하면 되므로, 가장 쉬운 구체를 그릴 수 있게 된다면 다른 객체들도 모두 쉽게 그릴 수 있을 것이다.
+
+#### 물체가 겹치는 경우
+
+한 줄기의 빛이 두 개 이상의 객체에 충돌한다면, 가장 가까운 객체만 반영해야 한다. 그러기 위해서는 광선이 물체에 닿는 좌표와 원점의 거리를 각 객체마다 구해주어야 한다. 그 후, 가장 가까운 객체를 찾아 그 객체에 대한 정보만을 반환하도록 해준다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minirt/06_06.png?raw=true)
+
+이를 위해 hit라는 구조체를 만들어주었고, 각 객체마다 hit구조체에 충돌에 대한 정보가 담기게 된다. 만약 충돌하지 않았다면, 임의로 설정한 큰 값이 유지되고, 충돌했다면 더 가까운 값이 들어올 때 마다 값을 업데이트 해준다. 모든 객체를 다 탐색했을 때, 가장 가까운 객체의 정보가 closest_hit 구조체에 담기게 된다.
+
+#### 조명 설정
+
+조명에 대한 처리는 [Phong Reflection Model](https://en.wikipedia.org/wiki/Phong_reflection_model)을 구현하면 된다. 이 부분은 [Ray Tracing in One Weekend Series](https://raytracing.github.io/)에 잘 설명되어있고, 코드도 참고할 수 있어서 한번 따라가보길 바란다.
+
+정말 간단한 요약은 물체가 부딪힌 거리가 같은 객체라도 조금씩 다르기 때문에(구체라면 면이 둥글기 때문에 부딪히는 거리가 다 다르다), 그 거리에 따라 빛의 세기를 조절해주면 거리가 더 멀수록 물체가 어둡게 처리되어 원근감이 나타나게 된다.
+
+그림자에 대한 처리는 광선이 객체에 부딪힌 후, 반사된 빛이 다른 객체에 부딪히게 된다면, 원래 표현되어야 할 객체의 색보다 더욱 어두운 색(혹은 아예 까만색으로 처리하기도 한다)을 반환하게 하여 처리할 수 있다.
+
+## Chapter 7
+
+### 결과
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minirt/07_00.png?raw=true)
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minirt/07_01.png?raw=true)
+
+같은 맵을 mlx 라이브러리를 통해 키보드 입력을 받아 시점을 변환할 수 있도록 만들어주었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minirt/07_02.png?raw=true)
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minirt/07_03.png?raw=true)
+
+범프 맵과 normal 처리 유무. 둘 다 같은 벽돌 이미지이다. 왼쪽은 normal map까지 적용시켰고, 하나는 적용시키지 않았는데, normal의 적용으로 인해 빛이 난반사가 일어나서 벽돌의 굴곡에 따라 빛이 반사되는 현상을 구현할 수 있었다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minirt/07_04.png?raw=true)
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minirt/07_05.png?raw=true)
+
+체크보드를 적용시켜 평면과 구체에 바둑판 모양이 나타날 수 있도록 구현하였다. 또한, 각각의 객체들 또한 키보드 입력을 통해 회전하거나 이동시킬 수 있도록 구현했다.
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minirt/07_06.gif?raw=true)
+
+![Alt text](https://github.com/chanwoong1/chanwoong1.github.io/blob/main/public/static/images/blog_posts/42seoul/minirt/07_07.gif?raw=true)
+
+이런 방식으로 회전시킬 수 있다.
+
+### 느낀 점
+
+이번 과제는 그래픽에 대해 많이 알지 못한 상태로 시작하기도 했고, 수학 공식들을 많이 사용해야 했던 과제여서 생각보다 예상보다 시간이 더 걸렸다. 그래도 git flow 전략을 통해 적절한 브랜치 사용으로 기능별 구현을 통해 동시 작업을 하더라도 깃이 꼬이지 않게 진행할 수 있었다. 일단은 그래픽쪽으로 관심이 크게 없던지라.. 이론적인 부분보다 협업을 위주로 과제를 진행했는데, 결과물도 만족스럽게 나와서 뿌듯했다.

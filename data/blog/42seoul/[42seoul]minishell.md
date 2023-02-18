@@ -187,7 +187,7 @@ signal(SIGQUIT, SIG_IGN);
 
 ### parsing
 
-흔히들 미니쉘의 꽃은 파싱이라고 한다. 파싱을 잘 해야 미니쉘이 수월해진다고 할 만큼 중요한 부분이다. readline을 통해 받아온 명령어를 [Lexical Analysis][https://en.wikipedia.org/wiki/lexical_analysis]를 통해 어휘를 분석하여 토큰을 생성해준다. 이 토큰을 통해 파싱을 해주는 식으로 진행하였다.
+흔히들 미니쉘의 꽃은 파싱이라고 한다. 파싱을 잘 해야 미니쉘이 수월해진다고 할 만큼 중요한 부분이다. readline을 통해 받아온 명령어를 [Lexical Analysis](https://en.wikipedia.org/wiki/lexical_analysis)를 통해 어휘를 분석하여 토큰을 생성해준다. 이 토큰을 통해 파싱을 해주는 식으로 진행하였다.
 
 프로그래밍에서 어휘란 명령어의 구문 분석에서 'cat'이란 명령어를 입력 시, 각각 ['c', 'a', 't']로 한 문자씩 본다면 명령어로써 의미가 없지만, 합쳐주면 명령어로써의 의미를 갖는 것처럼 명령어에서 의미를 갖는 항목들을 검출해서 토큰을 생성한다.
 
