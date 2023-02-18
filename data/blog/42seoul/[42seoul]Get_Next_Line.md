@@ -47,7 +47,7 @@ makefile은 만들 필요가 없다.
 
 ## Chapter 3
 
-### Mandatory part - Get_next_line
+### Mandatory part
 
 | 함수 이름            | get_next_line                                                                |
 | -------------------- | ---------------------------------------------------------------------------- |
